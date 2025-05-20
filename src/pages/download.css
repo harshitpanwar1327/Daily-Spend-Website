@@ -1,0 +1,21 @@
+.download-page-content {
+    width: 95%;
+    height: 80vh;
+    margin: 0 auto;
+    background-image: url('/src//assets/download-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+}
+
+.download-section {
+    grid-column: 2/3;
+    text-align: center;
+}
+
+.download-section-heading {
+    font-size: 2rem;
+}

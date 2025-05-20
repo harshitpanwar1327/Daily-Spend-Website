@@ -1,0 +1,37 @@
+.contact-page-content {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-form {
+    width: 35%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.contact-form-input {
+    width: calc(50% - 34px);
+    padding: 10px;
+    border: 1px solid #0000002f;
+    border-radius: 5px;
+}
+
+.contact-form-message-box {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #0000002f;
+    border-radius: 5px;
+}
+
+.contact-form-button {
+    background-color: rgb(255, 149, 9);
+    color: white;
+}
+
+.world-map-image {
+    width: 45%;
+}

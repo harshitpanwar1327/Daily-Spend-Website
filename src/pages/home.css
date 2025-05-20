@@ -1,0 +1,61 @@
+.home-page {
+    background-image: url('/src//assets/bg-slate.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.home-page-content{
+    width: 80%;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    color: #F1DABF;
+}
+
+.home-page-left-heading {
+    margin: 3rem;
+}
+
+.home-page-left-content {
+    padding: 16px;
+    background: linear-gradient(to right, #37415140 70%, transparent 30%);
+    border-radius: 10px;
+}
+
+.home-page-content-heading {
+    margin-top: 0%;
+}
+
+.home-page-content-para {
+    font-size: 14px;
+    margin-bottom: 0%;
+}
+
+.home-page-right-heading-container {
+    position: absolute;
+    top: 5%;
+    right: 27.5%;
+}
+
+.home-page-right-heading {
+    color: #1a1f2566;
+    transform: scale(2.2);
+}
+
+.iphone {
+    height: 400px;
+    filter: drop-shadow(10px 50px 25px #0f1115);
+    position: relative;
+    top: 20vh;
+}
+
+.home-page-content-section3 {
+    position: relative;
+    top: 20vh;
+    padding: 16px;
+    background: linear-gradient(to left, #1a1f2580 70%, transparent 30%);
+    border-radius: 10px;
+}

@@ -1,0 +1,48 @@
+.footer-section {
+    color: white;
+    background: linear-gradient(to right, #f19509, #e86f00);
+    padding: 20px 40px;
+    display: grid;
+}
+
+.footer-section-content {
+    display: flex;
+    gap: 10%;
+}
+
+.footer-section-content > div {
+    width: 30%;
+}
+
+.footer-about-para {
+    font-size: 14px;
+}
+
+.quick-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.quick-links > a {
+    color: white;
+    cursor: pointer;
+}
+
+.follow-us-icons {
+    display: flex;
+    gap: 24px;
+}
+
+.payment-cards {
+    width: 75%;
+}
+
+.footer-line {
+    width: 100%;
+    border: 1px solid white;
+}
+
+.copyright-section {
+    text-align: center;
+}

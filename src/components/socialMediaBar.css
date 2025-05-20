@@ -1,0 +1,30 @@
+.social-media-bar {
+    width: 100px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(255, 149, 9, 0.87), rgba(255, 149, 9, 0.5));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    z-index: 10;
+}
+
+.social-media-icons {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.5s ease 0.1s;
+}
+
+.social-media-icons:hover {
+    transform: scale(1.25);
+}
+
+.white-line {
+    border: 1px solid white;
+    height: 50px;
+}
