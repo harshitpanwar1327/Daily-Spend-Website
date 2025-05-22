@@ -12,7 +12,7 @@ const Contact = () => {
             initial = {{opacity: 0, y: 100}}
             whileInView = {{opacity: 1, y: 0}}
             transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.2}}
-            style={{marginBottom: '0'}}
+            style = {{marginBottom: '0'}}
           >We’d Love to Hear From You</motion.h1>
           <motion.input type="text" placeholder='Name' name='user_name' id='user_name'
             className='contact-form-input' required

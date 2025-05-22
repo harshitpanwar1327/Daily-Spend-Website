@@ -1,22 +1,3 @@
-.testimonial-page-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 80%;
-}
-
-.testimonial-page-heading {
-    margin: 0%;
-}
-
-.testimonial-page-subheading {
-    margin-top: 0%;
-}
-
-.mySwiper {
-    width: 100%;
-}
-
 .review-container {
     margin-bottom: 3rem;
 }

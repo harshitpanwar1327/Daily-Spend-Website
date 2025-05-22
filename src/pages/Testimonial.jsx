@@ -10,18 +10,18 @@ import { motion } from 'motion/react'
 const Testimonial = () => {
   return (
     <div className='page'>
-      <div className="testimonial-page-content">
-        <motion.h2 className='testimonial-page-heading'
+      <div className="whyUs-page-content">
+        <motion.h1 className='whyUs-page-heading'
           initial = {{opacity: 0, y: 100}}
           whileInView = {{opacity: 1, y: 0}}
-          transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.4}}
+          transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.2}}
         >
           Testimonial
-        </motion.h2>
-        <motion.p className='testimonial-page-subheading'
+        </motion.h1>
+        <motion.p className='whyUs-page-subheading'
           initial = {{opacity: 0, y: 100}}
           whileInView = {{opacity: 1, y: 0}}
-          transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.4}}
+          transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.2}}
         >
           My client saying
         </motion.p>
@@ -53,14 +53,14 @@ const Testimonial = () => {
               <motion.div className="review-box"
                 initial = {{opacity: 0, x: 100}}
                 whileInView = {{opacity: 1, x: 0}}
-                transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.8}}
+                transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.4}}
               >
                 {data.review}
               </motion.div>
               <motion.div className="client-profile"
                 initial = {{opacity: 0, x: 100}}
                 whileInView = {{opacity: 1, x: 0}}
-                transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 1.2}}
+                transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.6}}
               >
                 <img src={data.image} alt="image" className='client-img'/>
                 <div>

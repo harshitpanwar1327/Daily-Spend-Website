@@ -35,3 +35,13 @@
 .world-map-image {
     width: 45%;
 }
+
+@media ((min-width: 768px) and (max-width: 1024px)) {
+    .contact-form {
+        width: 40%;
+    }
+
+    .world-map-image {
+        width: 50%;
+    }
+}
