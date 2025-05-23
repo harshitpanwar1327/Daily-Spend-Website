@@ -1,5 +1,6 @@
 .review-container {
     margin-bottom: 3rem;
+    cursor: pointer;
 }
 
 .review-box {

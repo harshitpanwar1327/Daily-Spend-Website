@@ -21,7 +21,9 @@ const App = () => {
       <Element name='contact'>
         <Contact />
       </Element>
-      <Download />
+      <Element name='download'>
+        <Download />
+      </Element>
       <Footer />
     </div>
   )

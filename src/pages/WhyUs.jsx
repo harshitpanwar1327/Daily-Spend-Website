@@ -53,6 +53,7 @@ const WhyUs = () => {
               <motion.img src={data.image} alt="mobile" className="mobile-screenshot" 
                 initial = {{opacity: 0, x: 100}}
                 whileInView = {{opacity: 1, x: 0}}
+                viewport={{ once: true }}
                 transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.4}}
               />
               <motion.p className='mobile-description'

@@ -45,3 +45,15 @@
         width: 50%;
     }
 }
+
+@media ((min-width: 320px) and (max-width: 767px)) {
+    .contact-page-content {
+        flex-direction: column;
+        gap: 48px;
+    }
+
+    .contact-form,
+    .world-map-image {
+        width: 100%;
+    }
+}
