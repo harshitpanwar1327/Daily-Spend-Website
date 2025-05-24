@@ -14,6 +14,7 @@ const WhyUs = () => {
         <motion.h1 className='whyUs-page-heading'
           initial = {{opacity: 0, y: 100}}
           whileInView = {{opacity: 1, y:0}}
+          viewport={{ once: true }}
           transition = {{type: "spring", stiffness: 100, damping: 10, delay: 0.2}}
         >
           Why Daily Spend?
@@ -21,6 +22,7 @@ const WhyUs = () => {
         <motion.p className='whyUs-page-subheading'
           initial = {{opacity: 0, y: 100}}
           whileInView = {{opacity: 1, y:0}}
+          viewport={{ once: true }}
           transition = {{type: "spring", stiffness: 100, damping: 10, delay: 0.2}}
         >
           Smart tools. Simple tracking. Better control.
@@ -59,6 +61,7 @@ const WhyUs = () => {
               <motion.p className='mobile-description'
                 initial = {{opacity: 0, x: 100}}
                 whileInView = {{opacity: 1, x: 0}}
+                viewport={{ once: true }}
                 transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.6}}
               >{data.description}</motion.p>
             </SwiperSlide>

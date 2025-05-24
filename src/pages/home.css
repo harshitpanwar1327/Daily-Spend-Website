@@ -51,6 +51,7 @@
     filter: drop-shadow(10px 50px 25px #0f1115);
     position: relative;
     top: 15vh;
+    background: transparent;
 }
 
 .home-page-content-section3 {
@@ -83,6 +84,10 @@
     .home-page-left-heading {
         font-size: 3rem;
         text-align: center;
+    }
+
+    .home-page-left-content {
+        background:#37415140;
     }
 
     .iphone {

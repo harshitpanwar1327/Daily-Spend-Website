@@ -25,3 +25,10 @@
         padding: 5vh 0%;
     }
 }
+
+@media ((min-width: 320px) and (max-width: 768px)) {
+    .page {
+        min-height: auto;
+        padding: 5vh 0%;
+    }
+}

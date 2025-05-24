@@ -14,6 +14,7 @@ const Testimonial = () => {
         <motion.h1 className='whyUs-page-heading'
           initial = {{opacity: 0, y: 100}}
           whileInView = {{opacity: 1, y: 0}}
+          viewport={{ once: true }}
           transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.2}}
         >
           Testimonial
@@ -21,6 +22,7 @@ const Testimonial = () => {
         <motion.p className='whyUs-page-subheading'
           initial = {{opacity: 0, y: 100}}
           whileInView = {{opacity: 1, y: 0}}
+          viewport={{ once: true }}
           transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.2}}
         >
           My client saying
@@ -61,6 +63,7 @@ const Testimonial = () => {
               <motion.div className="client-profile"
                 initial = {{opacity: 0, x: 100}}
                 whileInView = {{opacity: 1, x: 0}}
+                viewport={{ once: true }}
                 transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.6}}
               >
                 <img src={data.image} alt="image" className='client-img'/>

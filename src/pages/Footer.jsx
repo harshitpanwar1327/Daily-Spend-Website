@@ -12,6 +12,7 @@ const Footer = () => {
         <motion.div className="about-section"
           initial = {{opacity: 0, y: 100}}
           whileInView={{opacity: 1, y: 0}}
+          viewport={{ once: true }}
           transition={{delay: 0.4, duration: 0.4}}
         >
           <h2>EXPENSE TRACKER</h2>
@@ -23,6 +24,7 @@ const Footer = () => {
         <motion.div className="quick-links-section"
           initial = {{opacity: 0, y: 100}}
           whileInView={{opacity: 1, y: 0}}
+          viewport={{ once: true }}
           transition={{delay: 0.6, duration: 0.4}}
         >
           <h2>QUICK LINKS</h2>
@@ -37,6 +39,7 @@ const Footer = () => {
         <motion.div className="follow-us-section"
         initial = {{opacity: 0, y: 100}}
         whileInView={{opacity: 1, y: 0}}
+        viewport={{ once: true }}
         transition={{delay: 0.8, duration: 0.4}}>
           <h2>FOLLOW US</h2>
           <div className="follow-us-icons">

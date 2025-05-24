@@ -18,6 +18,7 @@ const Home = () => {
             className='home-page-left-heading'
             initial = {{opacity: 0, y: -100}}
             whileInView = {{opacity: 1, y: 0}}
+            viewport={{ once: true }}
             transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.8}}
           >
             Daily <br /> Spend</motion.h1>
@@ -25,6 +26,7 @@ const Home = () => {
             className='home-page-left-content'
             initial = {{opacity: 0, y: 100}}
             whileInView = {{opacity: 1, y: 0}}
+            viewport={{ once: true }}
             transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 1.2}}
           >
             <h3 className='home-page-content-heading'>Take Control of Your Spending</h3>
@@ -35,6 +37,7 @@ const Home = () => {
           <motion.div
             initial = {{opacity: 0, x: -100}}
             whileInView = {{opacity: 1, x: 0}}
+            viewport={{ once: true }}
             transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.8}}
             className = 'home-page-right-heading-container'
           >
@@ -43,6 +46,7 @@ const Home = () => {
           <motion.img src={Iphone} alt="iphone" className='iphone img' 
             initial = {{opacity: 0, scale: 0}}
             whileInView = {{opacity: 1, scale: 1}}
+            viewport={{ once: true }}
             transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.4}}
           />
         </div>
@@ -50,6 +54,7 @@ const Home = () => {
           className="home-page-content-section3"
           initial = {{opacity: 0, y: 100}}
           whileInView = {{opacity: 1, y: 0}}
+          viewport={{ once: true }}
           transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 1.6}}
         >
           <h3 className='home-page-content-heading'>Your Finances at a Glance</h3>
