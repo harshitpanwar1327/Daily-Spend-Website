@@ -46,11 +46,27 @@ const FAQ = () => {
 
   return (
     <div className="py-20 px-4 md:px-12 lg:px-20 text-black flex flex-col gap-4">
-      <p className="text-center text-gray-500">FAQ</p>
-      <h2 className="text-3xl md:text-5xl font-semibold text-center mb-8">Everything you need to know</h2>
+      <motion.p className="text-center text-gray-500"
+        initial = {{opacity: 0, y: 100}}
+        whileInView = {{opacity: 1, y: 0}}
+        viewport={{ once: true }}
+        transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.2}}
+      >FAQ</motion.p>
+
+      <motion.h2 className="text-3xl md:text-5xl font-semibold text-center mb-8"
+        initial = {{opacity: 0, y: 100}}
+        whileInView = {{opacity: 1, y: 0}}
+        viewport={{ once: true }}
+        transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.4}}
+      >Everything you need to know</motion.h2>
       <div className="flex flex-col gap-10">
         {faqs.map((faq, index) => (
-          <div key={index} className="border-b border-gray-300 pb-4 cursor-pointer" onClick={() => toggleFAQ(index)}>
+          <motion.div key={index} className="border-b border-gray-300 pb-4 cursor-pointer" onClick={() => toggleFAQ(index)}
+            initial = {{opacity: 0, y: 100}}
+            whileInView = {{opacity: 1, y: 0}}
+            viewport={{ once: true }}
+            transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.2 * index}}
+          >
             <div className="flex justify-between items-center">
               <h3 className="text-lg font-medium">{faq.question}</h3>
               {openIndex === index ? (
@@ -72,7 +88,7 @@ const FAQ = () => {
                 </motion.p>
               )}
             </AnimatePresence>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
