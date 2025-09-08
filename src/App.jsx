@@ -1,12 +1,12 @@
 import './app.css'
 import Home from './pages/Home'
-import WhyUs from './pages/WhyUs'
+import WhyUs from './section/WhyUs.jsx'
 import AboutUs from './section/About.jsx'
 import Testimonial from './section/Testimonials.jsx'
 import Contact from './section/Contact.jsx'
-import Download from './pages/Download'
-import Footer from './components/Footer'
 import FAQ from './section/FAQ.jsx'
+import Download from './section/Download.jsx'
+import Footer from './components/Footer'
 import { Element } from 'react-scroll'
 
 const App = () => {

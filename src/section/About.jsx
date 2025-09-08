@@ -6,7 +6,7 @@ const About = () => {
   return (
     <Element 
       name='about' 
-      className='bg-black text-white flex flex-col justify-center items-center gap-24 py-24 px-8 md:px-16 lg:px-24'
+      className='bg-black text-white flex flex-col justify-center items-center gap-16 py-24 px-8 md:px-16 lg:px-24'
     >
       <div className='max-w-4xl text-center space-y-6'>
         <h2 className='text-4xl md:text-5xl font-bold'>About Us</h2>
@@ -15,7 +15,7 @@ const About = () => {
         </p>
       </div>
 
-      <div className='w-full flex flex-col gap-16'>
+      <div className='w-full flex flex-col gap-12'>
         <h2 className='text-3xl md:text-4xl font-semibold text-center'>Our Founders</h2>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
@@ -28,7 +28,7 @@ const About = () => {
           <div className='flex flex-col items-center text-center gap-4 bg-neutral-900 p-8 rounded-2xl shadow-lg'>
             <img src={cofounderImg} alt="Co-Founder" className='w-32 h-32 object-cover rounded-full border-4 border-white/20' />
             <h3 className='text-xl font-bold'>Kirti Ahlawat (CEO & Founder)</h3>
-            <p className='text-white/70 italic'>“An MBA graduate from IMED, Pune. Kirti brings her strategic leadership, business acumen, and user-focused approach to the venture, ensuring that Daily Spend continues to grow while staying true to its mission of empowering people to take control of their finances. Together, they form the driving force behind Daily Spend, blending technology with practical usability to make financial tracking effortless.”</p>
+            <p className='text-white/70 italic'>“An MBA graduate from IMED, Pune. Kirti brings her strategic leadership, business acumen, and user-focused approach to the venture, ensuring that Daily Spend continues to grow while staying true to its mission of empowering people to take control of their finances. Together, they form the driving force behind Daily Spend, blending technology with practical usability to make financial tracking effortless.”</p>
           </div>
         </div>
       </div>
