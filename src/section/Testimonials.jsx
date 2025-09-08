@@ -1,4 +1,3 @@
-import React from 'react'
 import './testimonial.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
@@ -7,7 +6,7 @@ import { Pagination } from 'swiper/modules'
 import { clients } from '../util/MyClients'
 import { motion } from 'motion/react'
 
-const Testimonial = () => {
+const Testimonials = () => {
   return (
     <div className='page whyUs-page-content'>
       <motion.h1 className='whyUs-page-heading'
@@ -78,4 +77,4 @@ const Testimonial = () => {
   )
 }
 
-export default Testimonial
+export default Testimonials
