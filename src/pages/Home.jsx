@@ -21,7 +21,8 @@ const Home = () => {
             viewport={{ once: true }}
             transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.8}}
           >
-            Daily <br /> Spend</motion.h1>
+            Daily Spend
+          </motion.h1>
           <motion.div 
             className='home-page-left-content'
             initial = {{opacity: 0, y: 100}}

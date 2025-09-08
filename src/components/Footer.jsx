@@ -1,6 +1,7 @@
 import React from 'react'
 import './footer.css'
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'
+import YouTubeIcon from '@mui/icons-material/YouTube'
+import InstagramIcon from '@mui/icons-material/Instagram'
 import PaymentCards from '../assets/payment-cards.webp'
 import { motion } from 'motion/react'
 import { Link } from 'react-scroll'
@@ -43,9 +44,8 @@ const Footer = () => {
         transition={{delay: 0.8, duration: 0.4}}>
           <h2>FOLLOW US</h2>
           <div className="follow-us-icons">
-            <FaFacebook className='social-media-icons'/>
-            <FaTwitter className='social-media-icons'/>
-            <a href="https://www.instagram.com/dailyspendapp?igsh=Z3U2dnF6c3Myejl3" target='_blank'><FaInstagram className='social-media-icons'/></a>
+            <a href="https://youtube.com/@dailyspend3363?si=wX5DzHMOJ3Skpr3i" target='_blank'><YouTubeIcon className='social-media-icons'/></a>
+            <a href="https://www.instagram.com/dailyspendapp?igsh=Z3U2dnF6c3Myejl3" target='_blank'><InstagramIcon className='social-media-icons'/></a>
           </div>
           <h3>Payment Modes</h3>
           <img src={PaymentCards} alt="payment-cards" className='payment-cards'/>

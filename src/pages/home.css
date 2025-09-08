@@ -2,6 +2,7 @@
     background-image: url('/src//assets/bg-slate.png');
     background-size: cover;
     background-position: center;
+    padding: 2rem 0rem;
 }
 
 .home-page-content{
@@ -16,7 +17,7 @@
 }
 
 .home-page-left-heading {
-    margin: 3rem;
+    margin-bottom: 3rem;
 }
 
 .home-page-left-content {

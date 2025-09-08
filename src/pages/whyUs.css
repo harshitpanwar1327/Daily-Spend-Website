@@ -4,6 +4,7 @@
     align-items: center;
     width: 80%;
     text-align: center;
+    margin: auto;
 }
 
 .whyUs-page-heading {
@@ -11,7 +12,7 @@
 }
 
 .whyUs-page-subheading {
-    margin-top: 0%;
+    margin-bottom: 2rem;
 }
 
 .mySwiper {

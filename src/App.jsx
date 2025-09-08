@@ -2,11 +2,12 @@ import React from 'react'
 import './app.css'
 import Home from './pages/Home'
 import WhyUs from './pages/WhyUs'
+import AboutUs from './pages/AboutUs'
 import Testimonial from './pages/Testimonial'
 import Contact from './pages/Contact'
 import Download from './pages/Download'
-import Footer from './pages/Footer'
-import { Element } from 'react-scroll';
+import Footer from './components/Footer'
+import { Element } from 'react-scroll'
 
 const App = () => {
   return (
@@ -14,16 +15,23 @@ const App = () => {
       <Element name='home'>
         <Home />
       </Element>
+
+      <WhyUs />
+
       <Element name='about'>
-        <WhyUs />
+        <AboutUs />
       </Element>
+
       <Testimonial />
+
       <Element name='contact'>
         <Contact />
       </Element>
+
       <Element name='download'>
         <Download />
       </Element>
+
       <Footer />
     </div>
   )
