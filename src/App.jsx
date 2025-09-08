@@ -8,6 +8,7 @@ import FAQ from './section/FAQ.jsx'
 import Download from './section/Download.jsx'
 import Footer from './components/Footer'
 import { Element } from 'react-scroll'
+import Hero from './section/Hero.jsx'
 
 const App = () => {
   return (
@@ -15,6 +16,8 @@ const App = () => {
       <Element name='home'>
         <Home />
       </Element>
+
+      <Hero />
 
       <WhyUs />
 
