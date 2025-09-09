@@ -6,7 +6,7 @@ const Download = () => {
   return (
     <div className='h-[80vh] bg-[url(/src//assets/download-bg.jpg)] bg-center bg-cover my-16 mx-8 rounded-lg grid grid-cols-1 lg:grid-cols-3 place-items-center'>
       <div className='lg:col-start-2 lg:col-span-2 flex flex-col items-center gap-2'>
-        <motion.h2 className='text-2xl md:text-4xl font-semibold'
+        <motion.h2 className='text-2xl md:text-4xl text-center font-semibold'
           initial = {{opacity: 0, y: 100}}
           whileInView = {{opacity: 1, y: 0}}
           viewport={{ once: true }}
@@ -23,7 +23,7 @@ const Download = () => {
           Get Daily Spend on your device and take control of your finances.
         </motion.p>
         <a href="https://apps.apple.com/in/app/daily-spend-expense-tracker/id1494517202" target='_blank'>
-          <motion.img src={AppStore} alt="App-store" width={150} className='!cursor-pointer'
+          <motion.img src={AppStore} alt="App-store" width={200} className='!cursor-pointer'
             initial = {{opacity: 0, y: 100}}
             whileInView = {{opacity: 1, y: 10}}
             viewport={{ once: true }}

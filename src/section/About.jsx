@@ -22,7 +22,15 @@ const About = () => {
           viewport={{ once: true }}
           transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.4}}
         >
-          <span className='font-semibold text-[#f19509]'>Daily Spend</span> – Expense Tracker was created with a vision to make personal finance simple, intuitive, and accessible for everyone. Since our launch in April 2020, we have grown organically, building a strong community of users who value simplicity, accuracy, and control in managing their expenses. With an outstanding 4.6-star rating, Daily Spend has become a reliable companion for thousands of users worldwide. We believe financial awareness drives better decisions. Our mission is to offer a seamless, intuitive experience that helps users spend smarter, save more, and build healthier financial habits—powered by continuous innovation and a passion for simplicity.
+          <span className='font-semibold text-[#f19509]'>Daily Spend</span> – Expense Tracker was created with a vision to make personal finance simple, intuitive, and accessible for everyone. Since our launch in April 2020, we have grown organically, building a strong community of users who value simplicity, accuracy, and control in managing their expenses. With an outstanding 4.6-star rating, Daily Spend has become a reliable companion for thousands of users worldwide.
+        </motion.p>
+        <motion.p className='text-lg text-white/80 leading-relaxed'
+          initial = {{opacity: 0, y: 100}}
+          whileInView = {{opacity: 1, y: 0}}
+          viewport={{ once: true }}
+          transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.6}}
+        >
+          We believe financial awareness drives better decisions. Our mission is to offer a seamless, intuitive experience that helps users spend smarter, save more, and build healthier financial habits—powered by continuous innovation and a passion for simplicity.
         </motion.p>
       </div>
 
@@ -31,7 +39,7 @@ const About = () => {
           initial = {{opacity: 0, y: 100}}
           whileInView = {{opacity: 1, y: 0}}
           viewport={{ once: true }}
-          transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.6}}
+          transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.8}}
         >Our Founders</motion.h2>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
@@ -39,7 +47,7 @@ const About = () => {
             initial = {{opacity: 0, x: -100}}
             whileInView = {{opacity: 1, x: 0}}
             viewport={{ once: true }}
-            transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.8}}
+            transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 1}}
           >
             <img src={founderImg} alt="Founder" className='w-32 h-32 object-cover rounded-full border-4 border-white/20' />
             <h3 className='text-xl font-bold'>Shashank Panwar (CTO & Founder)</h3>

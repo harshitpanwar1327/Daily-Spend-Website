@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <div className='text-white py-8 px-8 bg-gradient-to-r from-[#f19509] to-[#e86f00] flex flex-col gap-10'>
       <div className="flex flex-col md:flex-row justify-between gap-16">
-        <motion.div className="w-1/3 flex flex-col gap-4"
+        <motion.div className="w-full md:w-1/3 flex flex-col gap-4"
           initial = {{opacity: 0, y: 100}}
           whileInView={{opacity: 1, y: 0}}
           viewport={{ once: true }}
@@ -27,14 +27,14 @@ const Footer = () => {
           <p className='flex items-center gap-3'><Map className='w-5 h-5'/> Mohali, Punjab</p>
         </motion.div>
 
-        <motion.div className="w-1/3 flex flex-col gap-4"
+        <motion.div className="w-full md:w-1/3 flex flex-col gap-4"
           initial = {{opacity: 0, y: 100}}
           whileInView={{opacity: 1, y: 0}}
           viewport={{ once: true }}
           transition={{delay: 0.6, duration: 0.4}}
         >
           <h2 className='font-semibold text-lg'>QUICK LINKS</h2>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-2">
             <Link to="home" smooth={true} duration={500} className='cursor-pointer'>Home</Link>
             <Link to="about" smooth={true} duration={500} className='cursor-pointer'>About</Link>
             <Link to="contact" smooth={true} duration={500} className='cursor-pointer'>Contact Us</Link>
@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
         </motion.div>
 
-        <motion.div className="w-1/3 flex flex-col gap-4"
+        <motion.div className="w-full md:w-1/3 flex flex-col gap-4"
           initial = {{opacity: 0, y: 100}}
           whileInView={{opacity: 1, y: 0}}
           viewport={{ once: true }}
