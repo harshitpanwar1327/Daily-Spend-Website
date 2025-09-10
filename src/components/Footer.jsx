@@ -20,8 +20,8 @@ const Footer = () => {
           viewport={{ once: true }}
           transition={{delay: 0.4, duration: 0.4}}
         >
-          <h2 className='font-semibold text-lg'>EXPENSE TRACKER</h2>
-          <p className='text-sm'>Daily Spend is a smart expense tracker app that helps you manage daily spending, set budgets, and visualize monthly expenses easily.</p>
+          <h2 className='font-semibold text-xl'>EXPENSE TRACKER</h2>
+          <p>Daily Spend is a smart expense tracker app that helps you manage daily spending, set budgets, and visualize monthly expenses easily.</p>
           <p className='flex items-center gap-3'><Phone className='w-5 h-5'/>+91 6283 731 156, +91 97809 26717</p>
           <p className='flex items-center gap-3'><Mail className='w-5 h-5'/> support@dailyspend.in</p>
           <p className='flex items-center gap-3'><Map className='w-5 h-5'/> Mohali, Punjab</p>
@@ -33,7 +33,7 @@ const Footer = () => {
           viewport={{ once: true }}
           transition={{delay: 0.6, duration: 0.4}}
         >
-          <h2 className='font-semibold text-lg'>QUICK LINKS</h2>
+          <h2 className='font-semibold text-xl'>QUICK LINKS</h2>
           <div className="flex flex-col gap-2">
             <Link to="home" smooth={true} duration={500} className='cursor-pointer'>Home</Link>
             <Link to="about" smooth={true} duration={500} className='cursor-pointer'>About</Link>
@@ -48,12 +48,12 @@ const Footer = () => {
           viewport={{ once: true }}
           transition={{delay: 0.8, duration: 0.4}}
         >
-          <h2 className='font-semibold text-lg'>FOLLOW US</h2>
+          <h2 className='font-semibold text-xl'>FOLLOW US</h2>
           <div className="flex gap-2">
             <a href="https://youtube.com/@dailyspend3363?si=wX5DzHMOJ3Skpr3i" target='_blank'><YouTubeIcon className='social-media-icons'/></a>
             <a href="https://www.instagram.com/dailyspendapp?igsh=Z3U2dnF6c3Myejl3" target='_blank'><InstagramIcon className='social-media-icons'/></a>
           </div>
-          <h2 className='font-semibold text-lg'>Payment Modes</h2>
+          <h2 className='font-semibold text-xl'>Payment Modes</h2>
           <div className='flex flex-wrap gap-2'>
             <img src={Visa} alt="payment-cards" width={40} className='bg-white px-2 rounded'/>
             <img src={Maestro} alt="payment-cards" width={40} className='bg-white px-2 rounded'/>

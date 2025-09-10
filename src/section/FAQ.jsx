@@ -46,14 +46,14 @@ const FAQ = () => {
 
   return (
     <div className="py-20 px-4 md:px-12 lg:px-20 text-black flex flex-col gap-4">
-      <motion.p className="text-center text-gray-500"
+      <motion.p className="text-xl font-semibold text-center text-gray-600"
         initial = {{opacity: 0, y: 100}}
         whileInView = {{opacity: 1, y: 0}}
         viewport={{ once: true }}
         transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.2}}
       >FAQ</motion.p>
 
-      <motion.h2 className="text-3xl md:text-5xl font-semibold text-center mb-8"
+      <motion.h2 className="text-4xl md:text-5xl font-bold text-center mb-8"
         initial = {{opacity: 0, y: 100}}
         whileInView = {{opacity: 1, y: 0}}
         viewport={{ once: true }}

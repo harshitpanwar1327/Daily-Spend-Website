@@ -8,7 +8,7 @@ import Image7 from '../assets/whyUs/Image7.png'
 
 export const aboutApplication = [
     {
-        description: "Track Your Income & Expense With Categories",
+        description: "Start tracking today and take charge of your finances with ease.",
         image: Image1
     },
     {
@@ -16,7 +16,7 @@ export const aboutApplication = [
         image: Image2
     },
     {
-        description: "Generate Custom Date Report Or Monthly Report",
+        description: "Take control of your finances with customized reports that help you budget better and save smarter.",
         image: Image3
     },
     {
@@ -24,7 +24,7 @@ export const aboutApplication = [
         image: Image4
     },
     {
-        description: "Lend & Borrow Tracker",
+        description: "Start using it today to manage shared expenses and personal loans effortlessly",
         image: Image5
     },
     {

@@ -37,7 +37,7 @@ const Contact = () => {
     <>
       <Element name='contact' className="grid grid-cols-1 lg:grid-cols-2 gap-16 text-white bg-black py-24 px-8 md:px-16 lg:px-24">
         <div className='flex flex-col gap-8'>
-          <motion.h2 className='text-3xl md:text-5xl font-semibold'
+          <motion.h2 className='text-4xl md:text-5xl font-bold'
             initial = {{opacity: 0, y: 100}}
             whileInView = {{opacity: 1, y: 0}}
             viewport={{ once: true }}

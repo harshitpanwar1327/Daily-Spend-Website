@@ -9,16 +9,16 @@ import { Pagination } from 'swiper/modules';
 
 const WhyUs = () => {
   return (
-    <div className='page whyUs-page-content'>
-      <motion.h1 className='whyUs-page-heading'
+    <div className='flex flex-col items-center py-24 px-8 md:px-16 lg:px-24'>
+      <motion.h2 className='text-4xl md:text-5xl font-bold text-gray-900'
         initial = {{opacity: 0, y: 100}}
         whileInView = {{opacity: 1, y:0}}
         viewport={{ once: true }}
         transition = {{type: "spring", stiffness: 100, damping: 10, delay: 0.2}}
       >
         Why Daily Spend?
-      </motion.h1>
-      <motion.p className='whyUs-page-subheading'
+      </motion.h2>
+      <motion.p className='mt-2 mb-8 text-xl font-semibold text-gray-600'
         initial = {{opacity: 0, y: 100}}
         whileInView = {{opacity: 1, y:0}}
         viewport={{ once: true }}
@@ -26,6 +26,7 @@ const WhyUs = () => {
       >
         Smart tools. Simple tracking. Better control.
       </motion.p>
+
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
@@ -50,19 +51,21 @@ const WhyUs = () => {
         className="mySwiper"
       >
         {aboutApplication.map((data, index) => (
-          <SwiperSlide key={index} className='mobile-content'>
-            <motion.img src={data.image} alt="mobile" className="mobile-screenshot" 
-              initial = {{opacity: 0, x: 100}}
-              whileInView = {{opacity: 1, x: 0}}
-              viewport={{ once: true }}
-              transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.4}}
-            />
-            <motion.p className='mobile-description'
-              initial = {{opacity: 0, x: 100}}
-              whileInView = {{opacity: 1, x: 0}}
-              viewport={{ once: true }}
-              transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.6}}
-            >{data.description}</motion.p>
+          <SwiperSlide key={index} className='cursor-pointer mb-8'>
+            <div className='flex flex-col items-center gap-4'>
+              <motion.img src={data.image} alt="mobile" className="mobile-screenshot" 
+                initial = {{opacity: 0, x: 100}}
+                whileInView = {{opacity: 1, x: 0}}
+                viewport={{ once: true }}
+                transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.2}}
+              />
+              <motion.p className='text-center'
+                initial = {{opacity: 0, x: 100}}
+                whileInView = {{opacity: 1, x: 0}}
+                viewport={{ once: true }}
+                transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.4}}
+              >{data.description}</motion.p>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
