@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer"
 import Logo from '../assets/logo.png'
 import AppStore from '../assets/app_store.png'
 import IosShareIcon from '@mui/icons-material/IosShare'
-import { degrees } from "motion"
+import { motion } from "motion/react"
 
 const hero = () => {
     const { ref, inView } = useInView({
@@ -14,14 +14,39 @@ const hero = () => {
   return (
     <div className="py-24 px-8 md:px-16 lg:px-24 flex flex-col justify-center items-center gap-16" ref={ref}>
       <div className="flex flex-col items-center gap-4">
-        <img src={Logo} alt="DailySpend Logo" className="w-28 md:w-36 lg:w-40" />
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center">Track Your Expenses Smartly</h2>
-        <p className="text-xl font-semibold text-gray-600 text-center max-w-lg">Manage your daily spend with insights, analytics, and a touch of simplicity.</p>
+        <motion.img src={Logo} alt="DailySpend Logo" className="w-28 md:w-36 lg:w-40" 
+          initial = {{opacity: 0, scale: 0.5}}
+          whileInView = {{opacity: 1, scale: 1}}
+          viewport={{ once: true }}
+          transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.2}}
+        />
+        <motion.h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center"
+          initial = {{opacity: 0, y: 100}}
+          whileInView = {{opacity: 1, y: 0}}
+          viewport={{ once: true }}
+          transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.4}}
+        >Track Your Expenses Smartly</motion.h2>
+        <motion.p className="text-xl font-semibold text-gray-600 text-center max-w-lg"
+          initial = {{opacity: 0, y: 100}}
+          whileInView = {{opacity: 1, y: 0}}
+          viewport={{ once: true }}
+          transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.6}}
+        >Manage your daily spend with insights, analytics, and a touch of simplicity.</motion.p>
         <div className="flex flex-col md:flex-row items-center gap-6">
-          <a href="https://apps.apple.com/in/app/daily-spend-expense-tracker/id1494517202" target='_blank'>
+          <motion.a href="https://apps.apple.com/in/app/daily-spend-expense-tracker/id1494517202" target='_blank'
+            initial = {{opacity: 0, y: 100}}
+            whileInView = {{opacity: 1, y: 0}}
+            viewport={{ once: true }}
+            transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.8}}
+          >
             <img src={AppStore} alt="App-store" width={200} className='!cursor-pointer' />
-          </a>
-          <p className="text-blue-500 hover:text-blue-700 cursor-pointer flex items-center gap-1">View Pricing & Features <IosShareIcon sx={{fontSize: '18px'}}/></p>
+          </motion.a>
+          <motion.p className="text-blue-500 hover:text-blue-700 cursor-pointer flex items-center gap-1"
+            initial = {{opacity: 0, y: 100}}
+            whileInView = {{opacity: 1, y: 0}}
+            viewport={{ once: true }}
+            transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.8}}
+          >View Pricing & Features <IosShareIcon sx={{fontSize: '18px'}}/></motion.p>
         </div>
       </div>
 

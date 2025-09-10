@@ -9,7 +9,7 @@ import { Pagination } from 'swiper/modules';
 
 const WhyUs = () => {
   return (
-    <div className='flex flex-col items-center py-24 px-8 md:px-16 lg:px-24'>
+    <div className='flex flex-col items-center pb-24 px-8 md:px-16 lg:px-24 text-center'>
       <motion.h2 className='text-4xl md:text-5xl font-bold text-gray-900'
         initial = {{opacity: 0, y: 100}}
         whileInView = {{opacity: 1, y:0}}
@@ -18,7 +18,7 @@ const WhyUs = () => {
       >
         Why Daily Spend?
       </motion.h2>
-      <motion.p className='mt-2 mb-8 text-xl font-semibold text-gray-600'
+      <motion.p className='mt-2 mb-8 text-xl font-semibold text-gray-600 text-center'
         initial = {{opacity: 0, y: 100}}
         whileInView = {{opacity: 1, y:0}}
         viewport={{ once: true }}

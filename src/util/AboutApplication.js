@@ -12,7 +12,7 @@ export const aboutApplication = [
         image: Image1
     },
     {
-        description: "Add Expenses With Bills",
+        description: "Easily add bills to every transaction along with date, category, and notes. Keep your expenses organized & receipts stored in one place.",
         image: Image2
     },
     {
@@ -20,19 +20,19 @@ export const aboutApplication = [
         image: Image3
     },
     {
-        description: "Download & Share Report To Friends",
+        description: "Generate detailed monthly reports or customize them your way—then share as a PDF with friends and family.",
         image: Image4
     },
     {
-        description: "Start using it today to manage shared expenses and personal loans effortlessly",
+        description: "Start using it today to manage shared expenses and personal loans effortlessly.",
         image: Image5
     },
     {
-        description: "Lend & Borrow Details",
+        description: "See a full overview of who owes you and what you owe others, with detailed history for each transaction.",
         image: Image6
     },
     {
-        description: "Display Month Wise Transactions",
+        description: "View your transactions month-wise with complete details of dates, categories, notes, and attached bills.",
         image: Image7
     },
 ]
