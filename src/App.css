@@ -1,12 +1,5 @@
 @import "tailwindcss";
 
-.page {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .overlay {
     position: fixed;
     top: 0;
@@ -18,18 +11,4 @@
     align-items: center;
     z-index: 10;
     background-color: #0000001a;
-}
-
-@media ((min-width: 768px) and (max-width: 1024px)) {
-    .page {
-        min-height: auto;
-        padding: 5vh 0%;
-    }
-}
-
-@media ((min-width: 320px) and (max-width: 768px)) {
-    .page {
-        min-height: auto;
-        padding: 5vh 0%;
-    }
 }

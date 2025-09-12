@@ -9,18 +9,18 @@ const Home = () => {
   const [sidebar, setSidebar] = useState(false);
 
   return (
-    <div className='page bg-[url(/src//assets/bg-slate.png)] bg-center bg-cover py-10'>
+    <div className='page bg-[url(/src//assets/bg-slate.png)] bg-center bg-cover min-h-screen flex items-center justify-center'>
       <NavigationBar sidebar={sidebar} setSidebar={setSidebar}/>
 
-      <div className="home-page-content">
-        <div className="flex flex-col gap-20">
+      <div className="w-4/5 md:w-[90%] lg:w-4/5 grid grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-1 lg:grid-cols-3 place-items-center text-[#F1DABF] pt-16">
+        <div className="flex flex-col gap-8 lg:gap-16">
           <motion.div className='flex flex-col gap-2 font-semibold'
             initial = {{opacity: 0, y: -100}}
             whileInView = {{opacity: 1, y: 0}}
             viewport={{ once: true }}
             transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.8}}
           >
-            <h2 className='text-5xl'>Daily Spend</h2>
+            <h2 className='text-4xl'>Daily Spend</h2>
             <h3 className='text-2xl'>Expense Tracker</h3>
           </motion.div>
           <motion.div 
@@ -42,7 +42,7 @@ const Home = () => {
             viewport={{ once: true }}
             transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.8}}
           >Daily <br /> Spend</motion.h2>
-          <motion.img src={Iphone} alt="iphone" className='iphone img' 
+          <motion.img src={Iphone} alt="iPhone" className='iphone' 
             initial = {{opacity: 0, scale: 0}}
             whileInView = {{opacity: 1, scale: 1}}
             viewport={{ once: true }}
@@ -50,16 +50,24 @@ const Home = () => {
           />
         </div>
 
-        <motion.div 
-          className="bg-gradient-to-l from-[#1a1f2580] from-[70%] to-transparent to-[30%] p-4 rounded-lg flex flex-col gap-2"
-          initial = {{opacity: 0, y: 100}}
-          whileInView = {{opacity: 1, y: 0}}
-          viewport={{ once: true }}
-          transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 1.6}}
-        >
-          <h3 className='text-lg font-semibold'>Your Finances at a Glance</h3>
-          <p>Beautiful charts, smart insights, and real-time tracking give you a clear view of where your money goes—instantly.</p>
-        </motion.div>
+        <div className='flex flex-col justify-end gap-8 md:h-full'>
+          <motion.h3 className='text-xl font-semibold text-white px-4'
+            initial = {{opacity: 0, y: 100}}
+            whileInView = {{opacity: 1, y: 0}}
+            viewport={{ once: true }}
+            transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 1.6}}
+          ><span style={{color: '#f19509'}}>Track.</span>Save.<span style={{color: '#f19509'}}>Grow.</span></motion.h3>
+          <motion.div 
+            className="bg-gradient-to-r from-[#37415140] from-[70%] to-transparent to-[30%] lg:bg-gradient-to-l lg:from-[#1a1f2580] lg:from-[70%] lg:to-transparent lg:to-[30%] p-4 rounded-lg flex flex-col gap-2"
+            initial = {{opacity: 0, y: 100}}
+            whileInView = {{opacity: 1, y: 0}}
+            viewport={{ once: true }}
+            transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 1.8}}
+          >
+            <h3 className='text-lg font-semibold'>Your Finances at a Glance</h3>
+            <p>Beautiful charts, smart insights, and real-time tracking give you a clear view of where your money goes—instantly.</p>
+          </motion.div>
+        </div>
       </div>
 
       {sidebar && <SocialMediaBar />}

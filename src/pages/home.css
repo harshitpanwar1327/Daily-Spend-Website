@@ -1,41 +1,19 @@
-.home-page-content{
-    width: 80%;
-    min-height: 100vh;
-    margin: 0 auto;
-    padding-bottom: 6rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    place-items: center;
-    color: #F1DABF;
-}
-
 .iphone {
-    height: 75vh;
+    height: 65vh;
     filter: drop-shadow(10px 50px 25px #0f1115);
+    -webkit-filter: drop-shadow(10px 50px 25px #0f1115);
     position: relative;
-    top: 15vh;
-    background: transparent;
+    top: 5vh;
 }
 
 @media ((min-width: 768px) and (max-width: 1024px)) {
-    .home-page-content {
-        min-height: 45vh;
-    }
-
     .iphone {
-        height: 40vh;
-        top: 10vh;
+        height: 50vh;
+        top: 15vh;
     }
 }
 
 @media ((min-width: 320px) and (max-width: 767px)) {
-    .home-page-content {
-        display: flex;
-        flex-direction: column;
-        gap: 48px;
-        padding: 5rem 0rem;
-    }
-
     .iphone {
         top: 0;
         height: 65vh;

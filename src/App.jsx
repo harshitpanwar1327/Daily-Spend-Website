@@ -12,7 +12,7 @@ import Hero from './section/Hero.jsx'
 
 const App = () => {
   return (
-    <div>
+    <>
       <Element name='home'>
         <Home />
       </Element>
@@ -38,7 +38,7 @@ const App = () => {
       </Element>
 
       <Footer />
-    </div>
+    </>
   )
 }
 

@@ -9,7 +9,7 @@ import { motion } from 'motion/react'
 const Testimonials = () => {
   return (
     <div className='flex flex-col items-center py-24 px-8 md:px-16 lg:px-24'>
-      <motion.h2 className='text-4xl md:text-5xl font-bold text-gray-900'
+      <motion.h2 className='text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900'
         initial = {{opacity: 0, y: 100}}
         whileInView = {{opacity: 1, y: 0}}
         viewport={{ once: true }}
@@ -17,7 +17,7 @@ const Testimonials = () => {
       >
         Testimonial
       </motion.h2>
-      <motion.p className='mt-2 mb-8 text-xl font-semibold text-gray-600'
+      <motion.p className='mt-2 mb-8 text-md md:text-xl font-semibold text-gray-600'
         initial = {{opacity: 0, y: 100}}
         whileInView = {{opacity: 1, y: 0}}
         viewport={{ once: true }}
@@ -57,19 +57,17 @@ const Testimonials = () => {
               viewport={{ once: true }}
               transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.4}}
             >
-              <h3 className='text-xl font-semibold'>{data.heading}</h3>
+              <h3 className='md:text-xl font-semibold'>{data.heading}</h3>
               <p>{data.review}</p>
             </motion.div>
-            <motion.div className="client-profile"
+            <motion.div className="flex flex-col items-center"
               initial = {{opacity: 0, x: 100}}
               whileInView = {{opacity: 1, x: 0}}
               viewport={{ once: true }}
               transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.6}}
             >
-              <div>
-                <p className='client-name'><b>{data.name}</b></p>
-                <p className='client-work'>{data.work}</p>
-              </div>
+              <p className='font-semibold'>{data.name}</p>
+              <p>{data.work}</p>
             </motion.div>
           </SwiperSlide>
         ))}

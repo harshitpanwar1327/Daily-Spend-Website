@@ -6,8 +6,7 @@ import './socialMediaBar.css'
 
 const SocialMediaBar = () => {
   return (
-    <motion.div 
-      className='social-media-bar'
+    <motion.div className='social-media-bar'
       initial={{ x: '100%' }}
       whileInView={{ x: 0 }}
       transition={{ type: 'spring', delay: 0.2 }}

@@ -10,7 +10,7 @@ const About = () => {
       className='bg-black text-white flex flex-col justify-center items-center gap-16 py-24 px-8 md:px-16 lg:px-24'
     >
       <div className='max-w-4xl text-center space-y-6'>
-        <motion.h2 className='text-4xl md:text-5xl font-bold'
+        <motion.h2 className='text-2xl md:text-4xl lg:text-5xl font-bold'
           initial = {{opacity: 0, y: 100}}
           whileInView = {{opacity: 1, y: 0}}
           viewport={{ once: true }}
@@ -35,7 +35,7 @@ const About = () => {
       </div>
 
       <div className='w-full flex flex-col gap-12'>
-        <motion.h2 className='text-3xl md:text-4xl font-semibold text-center'
+        <motion.h2 className='text-xl md:text-3xl lg:text-4xl font-semibold text-center'
           initial = {{opacity: 0, y: 100}}
           whileInView = {{opacity: 1, y: 0}}
           viewport={{ once: true }}
@@ -50,7 +50,7 @@ const About = () => {
             transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 1}}
           >
             <img src={founderImg} alt="Founder" className='w-32 h-32 object-cover rounded-full border-4 border-white/20' />
-            <h3 className='text-xl font-bold'>Shashank Panwar (CTO & Founder)</h3>
+            <h3 className='md:text-xl font-bold'>Shashank Panwar (CTO & Founder)</h3>
             <p className='text-white/70'>“An M.Tech in Computer Science from Thapar University, Shashank built the first version of Daily Spend himself, combining intuitive design with powerful functionality. He continues to lead the technology vision, ensuring the app evolves with its users’ needs.”</p>
           </motion.div>
 
@@ -61,7 +61,7 @@ const About = () => {
             transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 1}}
           >
             <img src={cofounderImg} alt="Co-Founder" className='w-32 h-32 object-cover rounded-full border-4 border-white/20' />
-            <h3 className='text-xl font-bold'>Kirti Ahlawat (CEO & Founder)</h3>
+            <h3 className='md:text-xl font-bold'>Kirti Ahlawat (CEO & Founder)</h3>
             <p className='text-white/70'>“An MBA from IMED, Pune, Kirti brings strategic leadership and user-focused business acumen, driving Daily Spend’s growth while staying true to its mission of empowering people to manage their finances effortlessly.”</p>
           </motion.div>
         </div>

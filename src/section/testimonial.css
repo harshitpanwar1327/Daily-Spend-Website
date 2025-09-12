@@ -26,9 +26,3 @@
     bottom: 4rem;
     right: 10px;
 }
-
-.client-profile {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-}

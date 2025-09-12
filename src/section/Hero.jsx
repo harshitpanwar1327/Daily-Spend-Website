@@ -6,7 +6,7 @@ import IosShareIcon from '@mui/icons-material/IosShare'
 import { motion } from "motion/react"
 
 const hero = () => {
-    const { ref, inView } = useInView({
+  const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.7,
   });
@@ -20,13 +20,13 @@ const hero = () => {
           viewport={{ once: true }}
           transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.2}}
         />
-        <motion.h2 className="text-4xl md:text-5xl font-bold text-gray-900 text-center"
+        <motion.h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 text-center"
           initial = {{opacity: 0, y: 100}}
           whileInView = {{opacity: 1, y: 0}}
           viewport={{ once: true }}
           transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.4}}
         >Track Your Expenses Smartly</motion.h2>
-        <motion.p className="text-xl font-semibold text-gray-600 text-center max-w-lg"
+        <motion.p className="md:text-xl font-semibold text-gray-600 text-center max-w-lg"
           initial = {{opacity: 0, y: 100}}
           whileInView = {{opacity: 1, y: 0}}
           viewport={{ once: true }}
