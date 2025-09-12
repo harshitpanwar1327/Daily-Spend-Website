@@ -5,10 +5,7 @@ import cofounderImg from '../assets/about2.jpg'
 
 const About = () => {
   return (
-    <Element 
-      name='about' 
-      className='bg-black text-white flex flex-col justify-center items-center gap-16 py-24 px-8 md:px-16 lg:px-24'
-    >
+    <Element name='about' className='bg-black text-white flex flex-col justify-center items-center gap-16 py-24 px-8 md:px-16 lg:px-24' >
       <div className='max-w-4xl text-center space-y-6'>
         <motion.h2 className='text-2xl md:text-4xl lg:text-5xl font-bold'
           initial = {{opacity: 0, y: 100}}

@@ -1,7 +1,7 @@
 .iphone {
     height: 65vh;
-    filter: drop-shadow(10px 50px 25px #0f1115);
-    -webkit-filter: drop-shadow(10px 50px 25px #0f1115);
+    filter: drop-shadow(10px 30px 25px #0f1115);
+    -webkit-filter: drop-shadow(10px 30px 25px #0f1115);
     position: relative;
     top: 5vh;
 }

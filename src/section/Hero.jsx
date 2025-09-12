@@ -1,15 +1,19 @@
+import React, { useState } from 'react'
 import CountUp from "react-countup"
 import { useInView } from "react-intersection-observer"
 import Logo from '../assets/logo.png'
 import AppStore from '../assets/app_store.png'
 import IosShareIcon from '@mui/icons-material/IosShare'
 import { motion } from "motion/react"
+import Pricing from '../modals/Pricing'
 
 const hero = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.7,
   });
+
+  const [openModal, setOpenModal] = useState(false);
 
   return (
     <div className="py-24 px-8 md:px-16 lg:px-24 flex flex-col justify-center items-center gap-16" ref={ref}>
@@ -41,7 +45,7 @@ const hero = () => {
           >
             <img src={AppStore} alt="App-store" width={200} className='!cursor-pointer' />
           </motion.a>
-          <motion.p className="text-blue-500 hover:text-blue-700 cursor-pointer flex items-center gap-1"
+          <motion.p className="text-blue-500 hover:text-blue-700 cursor-pointer flex items-center gap-1" onClick={() => setOpenModal(true)}
             initial = {{opacity: 0, y: 100}}
             whileInView = {{opacity: 1, y: 0}}
             viewport={{ once: true }}
@@ -49,6 +53,8 @@ const hero = () => {
           >View Pricing & Features <IosShareIcon sx={{fontSize: '18px'}}/></motion.p>
         </div>
       </div>
+
+      { openModal && <Pricing setOpenModal={setOpenModal} /> }
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-16 text-center">
         <div>
