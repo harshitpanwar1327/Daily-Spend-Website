@@ -10,14 +10,14 @@ const plans = [
     quarterlyMonthly: 50,
     annuallyMonthly: 42 ,
     features: [
-      { text: "Up to 67 Agent conversations", included: true },
-      { text: "Up to 200 Images generation", included: true },
-      { text: "Up to 333 Images edit", included: true },
-      { text: "Up to 267-second videos", included: true },
-      { text: "Up to 4 Veo3 videos", included: true },
-      { text: "Commercial license", included: true },
-      { text: "Commercial license", included: false },
-      { text: "Commercial license", included: false },
+      { text: "Add Unlimited Transactions", included: true },
+      { text: "Data backup on server", included: true },
+      { text: "Track 5 entries of Lend and Borrow", included: true },
+      { text: "Remove ads after add transaction", included: true },
+      { text: "Generate Monthly Report with Ads", included: true },
+      { text: "Generate 1 custom report", included: true },
+      { text: "Remove Ads", included: false },
+      { text: "Add Bills On Transactions", included: false },
     ]
   },
   {
@@ -27,14 +27,14 @@ const plans = [
     quarterlyMonthly: 100,
     annuallyMonthly: 75,
     features: [
-      { text: "Up to 67 Agent conversations", included: true },
-      { text: "Up to 200 Images generation", included: true },
-      { text: "Up to 333 Images edit", included: true },
-      { text: "Up to 267-second videos", included: true },
-      { text: "Up to 4 Veo3 videos", included: true },
-      { text: "Unlimited Model Usage", included: true },
-      { text: "Unlimited Model Usage", included: true },
-      { text: "Commercial license", included: false },
+      { text: "Add Unlimited Transactions", included: true },
+      { text: "Data backup on server", included: true },
+      { text: "Track 8 entries of Lend and Borrow", included: true },
+      { text: "Remove ads after add transaction", included: true },
+      { text: "Generate Monthly Report", included: true },
+      { text: "Generate 2 custom report", included: true },
+      { text: "Remove Ads", included: true },
+      { text: "Add Bills On Transactions", included: false },
     ]
   },
   {
@@ -44,14 +44,14 @@ const plans = [
     quarterlyMonthly: 166,
     annuallyMonthly: 125,
     features: [
-      { text: "Up to 67 Agent conversations", included: true },
-      { text: "Up to 200 Images generation", included: true },
-      { text: "Up to 333 Images edit", included: true },
-      { text: "Up to 267-second videos", included: true },
-      { text: "Up to 4 Veo3 videos", included: true },
-      { text: "Unlimited Model Usage", included: true },
-      { text: "Unlimited Model Usage", included: true },
-      { text: "Commercial license", included: true },
+      { text: "Add Unlimited Transactions", included: true },
+      { text: "Data backup on server", included: true },
+      { text: "Track unlimited entries of Lend and Borrow", included: true },
+      { text: "Remove ads after add transaction", included: true },
+      { text: "Generate Monthly Report", included: true },
+      { text: "Generate unlimited custom report", included: true },
+      { text: "Remove Ads", included: true },
+      { text: "Add Bills On Transactions", included: true },
     ]
   }
 ];
