@@ -1,6 +1,6 @@
-import KeyboardDoubleArrowUpRoundedIcon from '@mui/icons-material/KeyboardDoubleArrowUpRounded'
-import { motion } from 'motion/react'
-import { useState } from 'react';
+import { ArrowBack } from '@mui/icons-material'
+import { motion, AnimatePresence } from 'motion/react'
+import { useState } from 'react'
 
 const plans = [
   {
@@ -59,50 +59,52 @@ const plans = [
 const Pricing = ({ setOpenModal }) => {
   const [duration, setDuration] = useState("quarterly");
   
-  return (
+  return (  
     <div className='w-screen h-screen fixed top-0 left-0 bg-white overflow-y-auto z-100'>
-      <div className='min-h-full flex flex-col items-center justify-center gap-8 py-16 px-8 md:px-12 lg:px-16'>
-        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 uppercase">Flexible Plans For Every Need</h2>
+      <AnimatePresence>
+        <ArrowBack style={{ fontSize: '32px' }} className='absolute top-5 left-5 cursor-pointer' onClick={()=>setOpenModal(false)} />
 
-        <div className="flex items-center gap-1 bg-gray-100 rounded-md p-1">
-          <button className={`px-6 py-2 text-sm font-semibold rounded-md flex items-center gap-4 ${duration === 'quarterly' ? 'bg-white': 'hover:bg-gray-200'}`} onClick={()=>setDuration('quarterly')}>Quarterly <span className={`text-[#f19509] ${duration === 'annually' && 'hidden'}`}>15 Days Free</span></button>
-          <button className={`px-6 py-2 text-sm font-semibold rounded-md flex items-center gap-4 ${duration === 'annually' ? 'bg-white': 'hover:bg-gray-200'}`} onClick={()=>setDuration('annually')}>Annually <span className={`text-[#f19509] ${duration === 'quarterly' && 'hidden'}`}>15 Days Free</span></button>
-        </div>
-
-        <div className="flex flex-col md:flex-row justify-center gap-8 w-full">
-          {plans.map((plan, index) => (
-            <motion.div key={index} className={`flex flex-col justify-between gap-2 rounded-2xl shadow-lg p-6 border border-gray-200 bg-gray-100 hover:bg-white`} 
-              whileHover={{ y: -5 }}
-            >
-              <h3 className="uppercase text-sm font-bold bg-white self-start px-1 rounded">{plan.name}</h3>
-              <p className="text-5xl font-semibold">{duration==='quarterly' ? plan.quarterlyPrice: plan.annuallyPrice}</p>
-              <p className="text-sm text-gray-600">₹ {duration==='quarterly' ? plan.quarterlyMonthly: plan.annuallyMonthly} per month</p>
-
-              <p className='mt-2 font-semibold'>Features</p>
-              <ul className="space-y-2 text-sm text-gray-700">
-                {plan.features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-2">
-                    {feature.included ? (
-                      <span className="text-green-500">✔</span>
-                    ) : (
-                      <span className="text-red-500">✖</span>
-                    )}
-                    {feature.text}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
-
-        <motion.div className='pt-4'
-          animate={{ y: [0, -10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+        <motion.div className='min-h-full flex flex-col items-center justify-center gap-8 py-16 px-8 md:px-12 lg:px-16'
+          initial={{ y: '-100%' }}
+          animate={{ y: 0 }}
+          exit={{ y: '-100%' }}
+          transition={{ duration: 0.5 }}
         >
-          <KeyboardDoubleArrowUpRoundedIcon sx={{fontSize: '32px'}} className='cursor-pointer transition duration-300 hover:scale-105' onClick={()=>setOpenModal(false)}/>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-900 uppercase">Flexible Plans For Every Need</h2>
+
+          <div className="flex items-center gap-1 bg-gray-100 rounded-md p-1">
+            <button className={`px-6 py-2 text-sm font-semibold rounded-md flex items-center gap-4 ${duration === 'quarterly' ? 'bg-white': 'hover:bg-gray-200'}`} onClick={()=>setDuration('quarterly')}>Quarterly <span className={`text-[#f19509] ${duration === 'annually' && 'hidden'}`}>15 Days Free</span></button>
+            <button className={`px-6 py-2 text-sm font-semibold rounded-md flex items-center gap-4 ${duration === 'annually' ? 'bg-white': 'hover:bg-gray-200'}`} onClick={()=>setDuration('annually')}>Annually <span className={`text-[#f19509] ${duration === 'quarterly' && 'hidden'}`}>15 Days Free</span></button>
+          </div>
+
+          <div className="flex flex-col md:flex-row justify-center gap-8 w-full">
+            {plans.map((plan, index) => (
+              <motion.div key={index} className={`flex flex-col justify-between gap-2 rounded-2xl shadow-lg p-6 border border-gray-200 bg-gray-100 hover:bg-white group`} 
+                whileHover={{ y: -5 }}
+              >
+                <h3 className="uppercase text-sm font-bold bg-white self-start px-1 rounded group-hover:bg-gray-100">{plan.name}</h3>
+                <p className="text-5xl font-semibold">{duration==='quarterly' ? plan.quarterlyPrice: plan.annuallyPrice}</p>
+                <p className="text-sm text-gray-600">₹ {duration==='quarterly' ? plan.quarterlyMonthly: plan.annuallyMonthly} per month</p>
+
+                <p className='mt-2 font-semibold'>Features</p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  {plan.features.map((feature, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      {feature.included ? (
+                        <span className="text-green-500">✔</span>
+                      ) : (
+                        <span className="text-red-500">✖</span>
+                      )}
+                      {feature.text}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
-      </div>
-    </div>
+      </AnimatePresence>
+    </div>  
   )
 }
 

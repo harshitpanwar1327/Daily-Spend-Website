@@ -46,7 +46,7 @@ const About = () => {
             viewport={{ once: true }}
             transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 1}}
           >
-            <img src={founderImg} alt="Founder" className='w-32 h-32 object-cover rounded-full border-4 border-white/20' />
+            {/* <img src={founderImg} alt="Founder" className='w-32 h-32 object-cover rounded-full border-4 border-white/20' /> */}
             <h3 className='md:text-xl font-bold'>Shashank Panwar (CTO & Founder)</h3>
             <p className='text-white/70'>“An M.Tech in Computer Science from Thapar University, Shashank built the first version of Daily Spend himself, combining intuitive design with powerful functionality. He continues to lead the technology vision, ensuring the app evolves with its users’ needs.”</p>
           </motion.div>
@@ -57,7 +57,7 @@ const About = () => {
             viewport={{ once: true }}
             transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 1}}
           >
-            <img src={cofounderImg} alt="Co-Founder" className='w-32 h-32 object-cover rounded-full border-4 border-white/20' />
+            {/* <img src={cofounderImg} alt="Co-Founder" className='w-32 h-32 object-cover rounded-full border-4 border-white/20' /> */}
             <h3 className='md:text-xl font-bold'>Kirti Ahlawat (CEO & Founder)</h3>
             <p className='text-white/70'>“An MBA from IMED, Pune, Kirti brings strategic leadership and user-focused business acumen, driving Daily Spend’s growth while staying true to its mission of empowering people to manage their finances effortlessly.”</p>
           </motion.div>

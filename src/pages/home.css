@@ -1,9 +1,12 @@
 .iphone {
-    height: 65vh;
-    filter: drop-shadow(10px 30px 25px #0f1115);
-    -webkit-filter: drop-shadow(10px 30px 25px #0f1115);
-    position: relative;
-    top: 5vh;
+  height: 65vh;
+  filter: drop-shadow(10px 30px 25px #0f1115);
+  -webkit-filter: drop-shadow(10px 30px 25px #0f1115);
+  position: relative;
+  top: 5vh;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: transform, opacity;
 }
 
 @media ((min-width: 768px) and (max-width: 1024px)) {
