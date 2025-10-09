@@ -57,27 +57,32 @@ const Contact = () => {
           transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.6}}
         >Feel free to reach out through the form or the contact details below.</motion.p>
 
-        <hr className='text-white/50'/>
-
-        <motion.p className='flex items-center gap-3'
+        <motion.hr className='text-white/50' 
           initial = {{opacity: 0, y: 100}}
           whileInView = {{opacity: 1, y: 0}}
           viewport={{ once: true }}
           transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.8}}
-        ><Phone className='w-5 h-5'/>+91 6283 731 156, +91 97809 26717</motion.p>
+        />
 
         <motion.p className='flex items-center gap-3'
           initial = {{opacity: 0, y: 100}}
           whileInView = {{opacity: 1, y: 0}}
           viewport={{ once: true }}
           transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 1}}
+        ><Phone className='w-5 h-5'/>+91 6283 731 156, +91 97809 26717</motion.p>
+
+        <motion.p className='flex items-center gap-3'
+          initial = {{opacity: 0, y: 100}}
+          whileInView = {{opacity: 1, y: 0}}
+          viewport={{ once: true }}
+          transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 1.2}}
         ><Mail className='w-5 h-5'/> support@dailyspend.in</motion.p>
         
         <motion.p
           initial = {{opacity: 0, y: 100}}
           whileInView = {{opacity: 1, y: 0}}
           viewport={{ once: true }}
-          transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 1.2}}
+          transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 1.4}}
         >We typically reply within 12-24 hours on business days.</motion.p>
       </div>
 
@@ -85,7 +90,7 @@ const Contact = () => {
         initial = {{opacity: 0, x: 100}}
         whileInView = {{opacity: 1, x: 0}}
         viewport={{ once: true }}
-        transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.4}}
+        transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 1.4}}
       >
         <div>
           <label className='block mb-2'>Name</label>

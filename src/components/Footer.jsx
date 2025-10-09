@@ -18,7 +18,7 @@ const Footer = () => {
           initial = {{opacity: 0, y: 100}}
           whileInView={{opacity: 1, y: 0}}
           viewport={{ once: true }}
-          transition={{delay: 0.4, duration: 0.4}}
+          transition={{delay: 0.2, duration: 0.4}}
         >
           <h2 className='font-semibold text-xl'>EXPENSE TRACKER</h2>
           <p>Daily Spend is a smart expense tracker app that helps you manage daily spending, set budgets, and visualize monthly expenses easily.</p>
@@ -31,7 +31,7 @@ const Footer = () => {
           initial = {{opacity: 0, y: 100}}
           whileInView={{opacity: 1, y: 0}}
           viewport={{ once: true }}
-          transition={{delay: 0.6, duration: 0.4}}
+          transition={{delay: 0.4, duration: 0.4}}
         >
           <h2 className='font-semibold text-xl'>QUICK LINKS</h2>
           <div className="flex flex-col gap-2">
@@ -46,7 +46,7 @@ const Footer = () => {
           initial = {{opacity: 0, y: 100}}
           whileInView={{opacity: 1, y: 0}}
           viewport={{ once: true }}
-          transition={{delay: 0.8, duration: 0.4}}
+          transition={{delay: 0.6, duration: 0.4}}
         >
           <h2 className='font-semibold text-xl'>FOLLOW US</h2>
           <div className="flex gap-2">
@@ -64,11 +64,21 @@ const Footer = () => {
         </motion.div>
       </div>
 
-      <hr />
+      <motion.hr 
+        initial = {{opacity: 0, x: -100}}
+        whileInView={{opacity: 1, x: 0}}
+        viewport={{ once: true }}
+        transition={{delay: 0.4, duration: 0.4}}
+      />
 
-      <div className="text-center">
-        <p>Copyright © 2024 Company Name. All rights reserved.</p>
-      </div>
+      <motion.div className="text-center"
+        initial = {{opacity: 0, x: -100}}
+        whileInView={{opacity: 1, x: 0}}
+        viewport={{ once: true }}
+        transition={{delay: 0.4, duration: 0.4}}
+      >
+        <p>Copyright &copy; 2025 Daily Spend. All rights reserved.</p>
+      </motion.div>
     </div>
   )
 }

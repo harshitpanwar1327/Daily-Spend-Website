@@ -13,7 +13,7 @@ const Testimonials = () => {
         initial = {{opacity: 0, y: 100}}
         whileInView = {{opacity: 1, y: 0}}
         viewport={{ once: true }}
-        transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.2}}
+        transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.2}}
       >
         Testimonial
       </motion.h2>
@@ -21,7 +21,7 @@ const Testimonials = () => {
         initial = {{opacity: 0, y: 100}}
         whileInView = {{opacity: 1, y: 0}}
         viewport={{ once: true }}
-        transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.2}}
+        transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.2}}
       >
         My client saying
       </motion.p>
@@ -55,7 +55,7 @@ const Testimonials = () => {
               initial = {{opacity: 0, x: 100}}
               whileInView = {{opacity: 1, x: 0}}
               viewport={{ once: true }}
-              transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.4}}
+              transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.4}}
             >
               <h3 className='md:text-xl font-semibold'>{data.heading}</h3>
               <p>{data.review}</p>
@@ -64,7 +64,7 @@ const Testimonials = () => {
               initial = {{opacity: 0, x: 100}}
               whileInView = {{opacity: 1, x: 0}}
               viewport={{ once: true }}
-              transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.6}}
+              transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.6}}
             >
               <p className='font-semibold'>{data.name}</p>
               <p>{data.work}</p>

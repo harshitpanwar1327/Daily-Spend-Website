@@ -65,7 +65,7 @@ const FAQ = () => {
             initial = {{opacity: 0, y: 100}}
             whileInView = {{opacity: 1, y: 0}}
             viewport={{ once: true }}
-            transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.2 * index}}
+            transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.2 * (index+2)}}
           >
             <div className="flex justify-between items-center">
               <h3 className="text-lg font-medium">{faq.question}</h3>

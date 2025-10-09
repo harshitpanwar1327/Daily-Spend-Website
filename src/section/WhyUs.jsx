@@ -14,7 +14,7 @@ const WhyUs = () => {
         initial = {{opacity: 0, y: 100}}
         whileInView = {{opacity: 1, y:0}}
         viewport={{ once: true }}
-        transition = {{type: "spring", stiffness: 100, damping: 10, delay: 0.2}}
+        transition = {{type: "spring", stiffness: 100, damping: 12, delay: 0.2}}
       >
         Why Daily Spend?
       </motion.h2>
@@ -22,7 +22,7 @@ const WhyUs = () => {
         initial = {{opacity: 0, y: 100}}
         whileInView = {{opacity: 1, y:0}}
         viewport={{ once: true }}
-        transition = {{type: "spring", stiffness: 100, damping: 10, delay: 0.2}}
+        transition = {{type: "spring", stiffness: 100, damping: 12, delay: 0.2}}
       >
         Smart tools. Simple tracking. Better control.
       </motion.p>

@@ -27,7 +27,7 @@ const Download = () => {
             initial = {{opacity: 0, y: 100}}
             whileInView = {{opacity: 1, y: 10}}
             viewport={{ once: true }}
-            transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.8}}
+            transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.6}}
           />
         </a>
       </div>
