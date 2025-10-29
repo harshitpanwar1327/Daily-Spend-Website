@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import {useState} from 'react'
 import './home.css'
 import NavigationBar from '../components/NavigationBar'
 import SocialMediaBar from '../components/SocialMediaBar'
@@ -70,7 +70,7 @@ const Home = () => {
         </div>
       </div>
 
-      {sidebar && <SocialMediaBar />}
+      {sidebar && <SocialMediaBar setSidebar={setSidebar} />}
     </div>
   )
 }

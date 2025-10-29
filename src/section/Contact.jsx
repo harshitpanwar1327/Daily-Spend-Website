@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { Phone, Mail } from "lucide-react"
 import { ArrowRight } from "lucide-react"
 import { Element } from 'react-scroll'
@@ -8,11 +8,16 @@ import { motion } from 'motion/react'
 
 const Contact = () => {
   const form = useRef();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
 
+    if (isSubmitting) return;
+
     try {
+      setIsSubmitting(true);
+
       emailjs
       .sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, form.current, {
         publicKey: import.meta.env.VITE_PUBLIC_KEY,
@@ -22,14 +27,17 @@ const Contact = () => {
           console.log('SUCCESS!');
           toast.success('Message sent successfully.');
           form.current.reset();
+          setIsSubmitting(false);
         },
         (error) => {
           console.log('FAILED...', error.text);
           toast.error('Message not sent!');
+          setIsSubmitting(false);
         },
       );
     } catch (error) {
       console.log(error);
+      setIsSubmitting(false);
     }
   };
 
@@ -94,17 +102,17 @@ const Contact = () => {
       >
         <div>
           <label className='block mb-2'>Name</label>
-          <input type="text" placeholder='Jane Smith' className='w-full p-3 rounded-lg bg-neutral-800 text-white focus:outline-none focus:ring-1 focus:ring-white' name='name'/>
+          <input type="text" placeholder='Jane Smith' className='w-full p-3 rounded-lg bg-neutral-800 text-white focus:outline-none focus:ring-1 focus:ring-white' name='user_name'/>
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
           <div>
             <label className='block mb-2'>Email</label>
-            <input type="email" placeholder='example@example.com' className='w-full p-3 rounded-lg bg-neutral-800 text-white focus:outline-none focus:ring-1 focus:ring-white' name='email'/>
+            <input type="email" placeholder='example@example.com' className='w-full p-3 rounded-lg bg-neutral-800 text-white focus:outline-none focus:ring-1 focus:ring-white' name='user_email'/>
           </div>
           <div>
             <label className='block mb-2'>Phone (optional)</label>
-            <input type="tel" placeholder='+123456789' className='w-full p-3 rounded-lg bg-neutral-800 text-white focus:outline-none focus:ring-1 focus:ring-white' name='phone'/>
+            <input type="tel" placeholder='+123456789' className='w-full p-3 rounded-lg bg-neutral-800 text-white focus:outline-none focus:ring-1 focus:ring-white' name='user_phone'/>
           </div>
         </div>
 
@@ -113,8 +121,9 @@ const Contact = () => {
           <textarea placeholder="I need..." rows="3" className="w-full p-3 rounded-lg bg-neutral-800 text-white focus:outline-none focus:ring-1 focus:ring-white" name='message'/>
         </div>
 
-        <button className="flex items-center justify-between bg-white p-1 rounded-full font-semibold hover:bg-gray-200 group w-full">
-          <p className='text-black px-3 mx-auto'>Submit</p>
+        <button disabled={isSubmitting}
+          className={`flex items-center justify-between p-1 rounded-full font-semibold w-full transition duration-300 ease-in-out ${isSubmitting ? 'bg-gray-400 cursor-not-allowed' : 'bg-white hover:bg-gray-200 group'}`}>
+          <p className='text-black px-3 mx-auto'>{isSubmitting ? 'Sending...' : 'Submit'}</p>
           <ArrowRight size={40} className='bg-black text-white rounded-full p-2 -rotate-45 group-hover:rotate-0 transition duration-300 ease-in-out'/>
         </button>
       </motion.form>
