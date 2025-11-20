@@ -8,10 +8,10 @@ import { motion, AnimatePresence } from "motion/react"
 import Pricing from '../modals/Pricing'
 import QrCodeScannerRoundedIcon from '@mui/icons-material/QrCodeScannerRounded'
 
-const hero = () => {
+const Hero = () => {
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.7,
+    threshold: 0.5,
   });
 
   const [openModal, setOpenModal] = useState(false);
@@ -62,17 +62,12 @@ const hero = () => {
           viewport={{ once: true }}
           transition={{type: 'spring', stiffness: 100, damping: 14, delay: 0.2}}
           whileHover={{ scale: 1.03, rotate: 0.5 }}
-          className="flex flex-col items-center justify-between gap-4 bg-gradient-to-r from-blue-500 to-indigo-700 text-white rounded-2xl p-8 text-center shadow-2xl group"
+          className="relative flex flex-col items-center justify-between gap-4 bg-black text-[#F1DABF] text-white rounded-2xl p-8 text-center shadow-2xl group"
         >
-          <motion.div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.15),transparent_70%)] opacity-70 group-hover:opacity-100 transition-opacity duration-500"
-            animate={{
-              backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"],
-            }}
-            transition={{
-              repeat: Infinity,
-              duration: 6,
-              ease: "linear",
-            }}
+          <motion.div 
+            className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.09),transparent_70%)] opacity-50"
+            animate={{ opacity: [0.4, 0.8, 0.4] }}
+            transition={{ repeat: Infinity, duration: 5 }}
           />
           <div>
             <motion.h2 className="flex items-center gap-2 text-2xl lg:text-3xl font-extrabold"
@@ -83,7 +78,8 @@ const hero = () => {
             >
               <QrCodeScannerRoundedIcon sx={{fontSize: '40px'}} /> Introducing
             </motion.h2>
-            <motion.h2 className="text-2xl lg:text-3xl font-extrabold text-yellow-300 drop-shadow-lg"
+            <motion.h2 className="text-2xl lg:text-3xl font-extrabold drop-shadow-lg"
+              style={{ color: "#F19509" }}
               initial={{y: 20, opacity: 0}}
               whileInView={{y: 0, opacity: 1}}
               transition={{delay: 0.4, type: 'spring', stiffness: 100, damping: 10}}
@@ -97,16 +93,16 @@ const hero = () => {
             >QweRty</motion.h2>
           </div>
 
-          <motion.p className="lg:text-lg text-blue-50"
+          <motion.p className="lg:text-lg text-blue-50 text-white/70"
             initial={{opacity: 0, y: 30}}
             whileInView={{opacity: 1, y: 0}}
             transition={{delay: 0.6, type: 'spring', stiffness: 100, damping: 12}}
             viewport={{once: true}}
           >
-            Create <span className="font-semibold text-white">dynamic, customizable QR codes</span> that grow with your business.  Track scans, analyze performance, and make every connection smarter — with <span className="font-semibold text-yellow-300">QweRty</span>.
+            Create <span className="font-semibold text-white">dynamic, customizable QR codes</span> that grow with your business.  Track scans, analyze performance, and make every connection smarter — with <span className="font-semibold text-[#F19509]">QweRty</span>.
           </motion.p>
 
-          <motion.a href="https://codeweaveqwerty.site" target="_blank" rel="noopener noreferrer" className="inline-block bg-white text-blue-600 px-8 py-3 rounded-full font-semibold shadow-md hover:bg-gray-100 hover:shadow-xl transition-all relative"
+          <motion.a href="https://codeweaveqwerty.site" target="_blank" rel="noopener noreferrer" className="inline-block bg-[#F19509] px-8 py-3 rounded-full font-semibold shadow-md hover:bg-gray-100 hover:text-black hover:shadow-xl transition-all relative"
             whileHover={{
               scale: 1.1,
               boxShadow: "0px 0px 25px rgba(255,255,255,0.6)",
@@ -142,4 +138,4 @@ const hero = () => {
   )
 }
 
-export default hero
+export default Hero

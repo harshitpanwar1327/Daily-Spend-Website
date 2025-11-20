@@ -21,7 +21,7 @@ const About = () => {
         >
           <span className='font-semibold text-[#f19509]'>Daily Spend</span> – Expense Tracker was created with a vision to make personal finance simple, intuitive, and accessible for everyone. Since our launch in April 2020, we have grown organically, building a strong community of users who value simplicity, accuracy, and control in managing their expenses. With an outstanding 4.6-star rating, Daily Spend has become a reliable companion for thousands of users worldwide.
         </motion.p>
-        <motion.p className='text-lg text-white/80 leading-relaxed'
+        <motion.p className='text-white/80 leading-relaxed'
           initial = {{opacity: 0, y: 100}}
           whileInView = {{opacity: 1, y: 0}}
           viewport={{ once: true }}

@@ -16,8 +16,7 @@ const Home = () => {
         <div className="flex flex-col gap-8 lg:gap-16">
           <motion.div className='flex flex-col gap-2 font-semibold'
             initial = {{opacity: 0, x: -100}}
-            whileInView = {{opacity: 1, x: 0}}
-            viewport={{ once: true }}
+            animate = {{opacity: 1, x: 0}}
             transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.4}}
           >
             <h2 className='text-4xl'>Daily Spend</h2>
@@ -26,8 +25,7 @@ const Home = () => {
           <motion.div 
             className='bg-gradient-to-r from-[#37415140] from-[70%] to-transparent to-[30%] p-4 rounded-lg flex flex-col gap-2'
             initial = {{opacity: 0, y: 100}}
-            whileInView = {{opacity: 1, y: 0}}
-            viewport={{ once: true }}
+            animate = {{opacity: 1, y: 0}}
             transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.6}}
           >
             <h3 className='text-lg font-semibold'>Take Control of Your Spending</h3>
@@ -38,14 +36,12 @@ const Home = () => {
         <div>
           <motion.h2 className='hidden md:block absolute top-10 left-[55vw] text-8xl font-bold text-[#1a1f2566]'
             initial = {{opacity: 0, x: -100}}
-            whileInView = {{opacity: 1, x: 0}}
-            viewport={{ once: true }}
+            animate = {{opacity: 1, x: 0}}
             transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.8}}
           >Daily <br /> Spend</motion.h2>
           <motion.img src={Iphone} alt="iPhone" className='iphone' 
             initial = {{opacity: 0, scale: 0}}
-            whileInView = {{opacity: 1, scale: 1}}
-            viewport={{ once: true }}
+            animate = {{opacity: 1, scale: 1}}
             transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.4}}
           />
         </div>
@@ -53,15 +49,13 @@ const Home = () => {
         <div className='flex flex-col justify-end gap-8 md:h-full'>
           <motion.h3 className='text-xl font-semibold text-white px-4'
             initial = {{opacity: 0, y: 100}}
-            whileInView = {{opacity: 1, y: 0}}
-            viewport={{ once: true }}
+            animate = {{opacity: 1, y: 0}}
             transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 1}}
           ><span style={{color: '#f19509'}}>Track.</span>Save.<span style={{color: '#f19509'}}>Grow.</span></motion.h3>
           <motion.div 
             className="bg-gradient-to-r from-[#37415140] from-[70%] to-transparent to-[30%] lg:bg-gradient-to-l lg:from-[#1a1f2580] lg:from-[70%] lg:to-transparent lg:to-[30%] p-4 rounded-lg flex flex-col gap-2"
             initial = {{opacity: 0, y: 100}}
-            whileInView = {{opacity: 1, y: 0}}
-            viewport={{ once: true }}
+            animate = {{opacity: 1, y: 0}}
             transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 1.2}}
           >
             <h3 className='text-lg font-semibold'>Your Finances at a Glance</h3>
