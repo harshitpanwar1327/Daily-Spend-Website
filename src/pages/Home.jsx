@@ -2,7 +2,7 @@ import {useState} from 'react'
 import './home.css'
 import NavigationBar from '../components/NavigationBar'
 import SocialMediaBar from '../components/SocialMediaBar'
-import Iphone from '../assets/iphone.png'
+import Iphone from '../assets/iphone1.png'
 import { motion } from "motion/react"
 
 const Home = () => {
