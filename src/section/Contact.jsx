@@ -102,13 +102,13 @@ const Contact = () => {
       >
         <div>
           <label className='block mb-2'>Name</label>
-          <input type="text" placeholder='Jane Smith' className='w-full p-3 rounded-lg bg-neutral-800 text-white focus:outline-none focus:ring-1 focus:ring-white' name='user_name'/>
+          <input type="text" placeholder='Jane Smith' className='w-full p-3 rounded-lg bg-neutral-800 text-white focus:outline-none focus:ring-1 focus:ring-white' name='user_name' required/>
         </div>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
           <div>
             <label className='block mb-2'>Email</label>
-            <input type="email" placeholder='example@example.com' className='w-full p-3 rounded-lg bg-neutral-800 text-white focus:outline-none focus:ring-1 focus:ring-white' name='user_email'/>
+            <input type="email" placeholder='example@example.com' className='w-full p-3 rounded-lg bg-neutral-800 text-white focus:outline-none focus:ring-1 focus:ring-white' name='user_email' required/>
           </div>
           <div>
             <label className='block mb-2'>Phone (optional)</label>
@@ -118,7 +118,7 @@ const Contact = () => {
 
         <div>
           <label className="block mb-2">Message</label>
-          <textarea placeholder="I need..." rows="3" className="w-full p-3 rounded-lg bg-neutral-800 text-white focus:outline-none focus:ring-1 focus:ring-white" name='message'/>
+          <textarea placeholder="I need..." rows="3" className="w-full p-3 rounded-lg bg-neutral-800 text-white focus:outline-none focus:ring-1 focus:ring-white" name='message' required/>
         </div>
 
         <button disabled={isSubmitting}
