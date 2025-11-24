@@ -1,5 +1,5 @@
-import {motion} from 'motion/react'
-import {aboutApplication} from '../util/AboutApplication'
+import { motion } from 'motion/react'
+import { aboutApplication } from '../util/AboutApplication'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';

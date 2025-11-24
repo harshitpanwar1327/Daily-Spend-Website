@@ -8,7 +8,7 @@ import Image7 from '../assets/whyUs/Image7.png'
 
 export const aboutApplication = [
     {
-        description: "Start tracking today and take charge of your finances with ease.",
+        description: "A clean, all-in-one dashboard to monitor income, expense, and investment activity, beautifully sorted by payment mode.",
         image: Image1
     },
     {
