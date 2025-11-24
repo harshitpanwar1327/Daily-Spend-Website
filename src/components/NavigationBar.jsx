@@ -1,6 +1,6 @@
-import React from 'react'
 import { motion } from 'motion/react'
 import MenuIcon from '@mui/icons-material/Menu'
+import Logo from '../assets/logo.png'
 
 const NavigationBar = ({sidebar, setSidebar}) => {
   return (
@@ -10,7 +10,8 @@ const NavigationBar = ({sidebar, setSidebar}) => {
       animate = {{opacity: 1, y: 0}}
       transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.2}}
     >
-      <h2 className='text-xl font-semibold'><span style={{color: '#f19509'}}>Expense</span> Tracker.</h2>
+      {/* <h2 className='text-xl font-semibold'><span style={{color: '#f19509'}}>Expense</span> Tracker.</h2> */}
+      <img src={Logo} alt="Logo" className='w-15' />
       <MenuIcon sx={{fontSize: '32px'}} className='text-white cursor-pointer hover:scale-120 !transition duration-500 z-20' onClick={() => setSidebar(!sidebar)}/>
     </motion.div>
   )

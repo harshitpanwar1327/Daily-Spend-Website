@@ -2,7 +2,7 @@ import './testimonial.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
-import { Pagination } from 'swiper/modules'
+import { Pagination, Autoplay } from 'swiper/modules'
 import { clients } from '../util/MyClients'
 import { motion } from 'motion/react'
 
@@ -29,6 +29,10 @@ const Testimonials = () => {
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
         }}
@@ -46,8 +50,8 @@ const Testimonials = () => {
             spaceBetween: 48,
           },
         }}
-        modules={[Pagination]}
-        className="mySwiper"
+        modules={[Pagination, Autoplay]}
+        className="mySwiper w-full"
       >
         {clients.map((data, index) => (
           <SwiperSlide key={index} className="mb-8">

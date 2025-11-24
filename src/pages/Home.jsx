@@ -23,7 +23,7 @@ const Home = () => {
             <h3 className='text-2xl'>Expense Tracker</h3>
           </motion.div>
           <motion.div 
-            className='bg-gradient-to-r from-[#37415140] from-[70%] to-transparent to-[30%] p-4 rounded-lg flex flex-col gap-2'
+            className='bg-gradient-to-r from-[#37415140] from-[70%] p-4 rounded-lg flex flex-col gap-2'
             initial = {{opacity: 0, y: 100}}
             animate = {{opacity: 1, y: 0}}
             transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.6}}
@@ -41,7 +41,7 @@ const Home = () => {
           >Daily <br /> Spend</motion.h2>
           <motion.img src={Iphone} alt="iPhone" className='iphone' 
             initial = {{opacity: 0, scale: 0}}
-            animate = {{opacity: 1, scale: 1}}
+            animate = {{opacity: 1, scale: 1.1}}
             transition = {{type: 'spring', stiffness: 100, damping: 10, delay: 0.4}}
           />
         </div>
@@ -53,7 +53,7 @@ const Home = () => {
             transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 1}}
           ><span style={{color: '#f19509'}}>Track.</span>Save.<span style={{color: '#f19509'}}>Grow.</span></motion.h3>
           <motion.div 
-            className="bg-gradient-to-r from-[#37415140] from-[70%] to-transparent to-[30%] lg:bg-gradient-to-l lg:from-[#1a1f2580] lg:from-[70%] lg:to-transparent lg:to-[30%] p-4 rounded-lg flex flex-col gap-2"
+            className="bg-gradient-to-l from-[#37415140] from-[70%] p-4 rounded-lg flex flex-col gap-2"
             initial = {{opacity: 0, y: 100}}
             animate = {{opacity: 1, y: 0}}
             transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 1.2}}

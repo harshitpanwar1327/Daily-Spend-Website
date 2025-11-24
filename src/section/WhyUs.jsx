@@ -1,11 +1,9 @@
-import React from 'react'
-import './whyUs.css'
 import {motion} from 'motion/react'
 import {aboutApplication} from '../util/AboutApplication'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 
 const WhyUs = () => {
   return (
@@ -30,6 +28,10 @@ const WhyUs = () => {
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
         }}
@@ -47,13 +49,13 @@ const WhyUs = () => {
             spaceBetween: 30,
           },
         }}
-        modules={[Pagination]}
-        className="mySwiper"
+        modules={[Pagination, Autoplay]}
+        className="mySwiper w-full"
       >
         {aboutApplication.map((data, index) => (
           <SwiperSlide key={index} className='cursor-pointer mb-8'>
             <div className='flex flex-col items-center gap-4'>
-              <motion.img src={data.image} alt="mobile" className="mobile-screenshot" 
+              <motion.img src={data.image} alt="mobile" className="h-[60vh]" 
                 initial = {{opacity: 0, x: 100}}
                 whileInView = {{opacity: 1, x: 0}}
                 viewport={{ once: true }}
