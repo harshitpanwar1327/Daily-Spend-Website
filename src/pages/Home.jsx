@@ -53,7 +53,7 @@ const Home = () => {
             transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 1}}
           ><span style={{color: '#f19509'}}>Track.</span>Save.<span style={{color: '#f19509'}}>Grow.</span></motion.h3>
           <motion.div 
-            className="bg-gradient-to-l from-[#37415140] from-[70%] p-4 rounded-lg flex flex-col gap-2"
+            className="bg-gradient-to-l md:bg-gradient-to-r lg:bg-gradient-to-l from-[#37415140] from-[70%] p-4 rounded-lg flex flex-col gap-2"
             initial = {{opacity: 0, y: 100}}
             animate = {{opacity: 1, y: 0}}
             transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 1.2}}
