@@ -1,4 +1,3 @@
-import React from 'react'
 import YouTubeIcon from '@mui/icons-material/YouTube'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import GPay from '../assets/footer/googlepay.png'
@@ -9,6 +8,7 @@ import Visa from '../assets/footer/visa.png'
 import { Phone, Mail, Map } from "lucide-react"
 import { motion } from 'motion/react'
 import { Link } from 'react-scroll'
+import { NavLink } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -39,6 +39,9 @@ const Footer = () => {
             <Link to="about" smooth={true} duration={500} className='cursor-pointer'>About</Link>
             <Link to="contact" smooth={true} duration={500} className='cursor-pointer'>Contact Us</Link>
             <Link to="download" smooth={true} duration={500} className='cursor-pointer'>Download</Link>
+            <NavLink to={"/privacy-policy"}>Privacy Policy</NavLink>
+            <NavLink to={"/refund-and-cancellation-policy"}>Refund & Cancellation Policy</NavLink>
+            <NavLink to={"/terms-and-conditions"}>Terms & Conditions</NavLink>
           </div>
         </motion.div>
 

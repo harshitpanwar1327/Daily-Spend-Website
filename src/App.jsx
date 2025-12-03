@@ -1,45 +1,18 @@
-import './app.css'
-import Home from './pages/Home'
-import WhyUs from './section/WhyUs.jsx'
-import AboutUs from './section/About.jsx'
-import Testimonial from './section/Testimonials.jsx'
-import Contact from './section/Contact.jsx'
-import FAQ from './section/FAQ.jsx'
-import Download from './section/Download.jsx'
-import Footer from './components/Footer'
-import { Element } from 'react-scroll'
-import Hero from './section/Hero.jsx'
+import { Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import RefundAndCancellationPolicy from "./pages/RefundAndCancellationPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 const App = () => {
   return (
-    <>
-      <Element name='home'>
-        <Home />
-      </Element>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/refund-and-cancellation-policy" element={<RefundAndCancellationPolicy />} />
+      <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+    </Routes>
+  );
+};
 
-      <Hero />
-
-      <WhyUs />
-
-      <Element name='about'>
-        <AboutUs />
-      </Element>
-
-      <Testimonial />
-
-      <Element name='contact'>
-        <Contact />
-      </Element>
-
-      <FAQ />
-
-      <Element name='download'>
-        <Download />
-      </Element>
-
-      <Footer />
-    </>
-  )
-}
-
-export default App
+export default App;
