@@ -37,7 +37,7 @@ const About = () => {
           whileInView = {{opacity: 1, y: 0}}
           viewport={{ once: true }}
           transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.8}}
-        >Our Founders</motion.h2>
+        >Our Team</motion.h2>
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
           <motion.div className='flex flex-col items-center text-center gap-4 bg-neutral-900 p-8 rounded-2xl shadow-lg'
