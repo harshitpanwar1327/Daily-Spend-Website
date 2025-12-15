@@ -37,8 +37,8 @@ const About = () => {
           transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 0.8}}
         >Our Team</motion.h2>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
-          <motion.div className='flex flex-col items-center text-center gap-4 bg-neutral-900 p-8 rounded-2xl shadow-lg'
+        <div className='flex flex-col lg:flex-row flex-wrap justify-center items-stretch gap-12'>
+          <motion.div className='lg:w-[45%] flex flex-col items-center text-center gap-4 bg-neutral-900 p-8 rounded-2xl shadow-lg'
             initial = {{opacity: 0, x: -100}}
             whileInView = {{opacity: 1, x: 0}}
             viewport={{ once: true }}
@@ -48,7 +48,7 @@ const About = () => {
             <p className='text-white/70'>“An M.Tech in Computer Science from Thapar University, Shashank built the first version of Daily Spend himself, combining intuitive design with powerful functionality. He continues to lead the technology vision, ensuring the app evolves with its users’ needs.”</p>
           </motion.div>
 
-          <motion.div className='flex flex-col items-center text-center gap-4 bg-neutral-900 p-8 rounded-2xl shadow-lg'
+          <motion.div className='lg:w-[45%] flex flex-col items-center text-center gap-4 bg-neutral-900 p-8 rounded-2xl shadow-lg'
             initial = {{opacity: 0, x: 100}}
             whileInView = {{opacity: 1, x: 0}}
             viewport={{ once: true }}
@@ -58,13 +58,13 @@ const About = () => {
             <p className='text-white/70'>“An MBA from IMED, Pune, Kirti brings strategic leadership and user-focused business acumen, driving Daily Spend’s growth while staying true to its mission of empowering people to manage their finances effortlessly.”</p>
           </motion.div>
 
-          <motion.div className='flex flex-col items-center text-center gap-4 bg-neutral-900 p-8 rounded-2xl shadow-lg'
+          <motion.div className='lg:w-[45%] flex flex-col items-center text-center gap-4 bg-neutral-900 p-8 rounded-2xl shadow-lg'
             initial = {{opacity: 0, x: 100}}
             whileInView = {{opacity: 1, x: 0}}
             viewport={{ once: true }}
             transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 1}}
           >
-            <h3 className='md:text-xl font-bold'>Harshit Panwar (CTO)</h3>
+            <h3 className='md:text-xl font-bold'>Harshit Panwar (Head Of Web Engineering)</h3>
             <p className='text-white/70'>“A B.Tech graduate in Computer Science from Amity University, Noida, Harshit leads the development of the Daily Spend web application. He focuses on building a scalable, high-performance web platform in close collaboration with the core technology team.”</p>
           </motion.div>
         </div>
