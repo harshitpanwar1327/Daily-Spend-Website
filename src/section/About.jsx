@@ -61,6 +61,17 @@ const About = () => {
             <h3 className='md:text-xl font-bold'>Kirti Ahlawat (CEO & Founder)</h3>
             <p className='text-white/70'>“An MBA from IMED, Pune, Kirti brings strategic leadership and user-focused business acumen, driving Daily Spend’s growth while staying true to its mission of empowering people to manage their finances effortlessly.”</p>
           </motion.div>
+
+          <motion.div className='flex flex-col items-center text-center gap-4 bg-neutral-900 p-8 rounded-2xl shadow-lg'
+            initial = {{opacity: 0, x: 100}}
+            whileInView = {{opacity: 1, x: 0}}
+            viewport={{ once: true }}
+            transition = {{type: 'spring', stiffness: 100, damping: 12, delay: 1}}
+          >
+            {/* <img src={cofounderImg} alt="Co-Founder" className='w-32 h-32 object-cover rounded-full border-4 border-white/20' /> */}
+            <h3 className='md:text-xl font-bold'>Harshit Panwar (CTO)</h3>
+            <p className='text-white/70'>“A B.Tech graduate in Computer Science from Amity University, Noida”</p>
+          </motion.div>
         </div>
       </div>
     </Element>

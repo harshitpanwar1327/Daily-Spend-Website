@@ -1,9 +1,12 @@
 import Footer from "../components/Footer"
+import Logo from '../assets/logo.png'
+import { Element } from "react-scroll"
 
 const TermsAndConditions = () => {
   return (
-    <div className="flex flex-col w-screen min-h-screen overflow-y-auto">
-      <div className="w-full bg-gradient-to-r from-orange-100 via-orange-200 to-orange-300 py-30 text-center flex flex-col gap-4">
+    <Element name="terms" className="flex flex-col w-screen min-h-screen overflow-y-auto">
+      <div className="w-full bg-gradient-to-r from-orange-100 via-orange-200 to-orange-300 py-20 flex flex-col items-center gap-4">
+        <img src={Logo} alt="daily spend" className="w-25" />
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Terms of Use</h2>
       </div>
 
@@ -106,7 +109,7 @@ const TermsAndConditions = () => {
       </div>
 
       <Footer />
-    </div>
+    </Element>
   )
 }
 

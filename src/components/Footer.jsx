@@ -7,10 +7,37 @@ import Paytm from '../assets/footer/paytm.png'
 import Visa from '../assets/footer/visa.png'
 import { Phone, Mail, Map } from "lucide-react"
 import { motion } from 'motion/react'
-import { Link } from 'react-scroll'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation, useNavigate } from 'react-router-dom'
+import { scroller } from "react-scroll"
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleScroll = (route, section) => {
+    if (location.pathname !== route) {
+      navigate(route);
+
+      setTimeout(() => {
+        if (section) {
+          scroller.scrollTo(section, {
+            smooth: true,
+            duration: 600,
+            offset: 0,
+          });
+        }
+      }, 200);
+    } else {
+      if (section) {
+        scroller.scrollTo(section, {
+          smooth: true,
+          duration: 600,
+          offset: 0,
+        });
+      }
+    }
+  };
+
   return (
     <div className='text-white py-8 px-8 bg-gradient-to-r from-[#f19509] to-[#e86f00] flex flex-col gap-10'>
       <div className="flex flex-col md:flex-row justify-between gap-16">
@@ -35,13 +62,13 @@ const Footer = () => {
         >
           <h2 className='font-semibold text-xl'>QUICK LINKS</h2>
           <div className="flex flex-col gap-2">
-            <Link to="home" smooth={true} duration={500} className='cursor-pointer'>Home</Link>
-            <Link to="about" smooth={true} duration={500} className='cursor-pointer'>About</Link>
-            <Link to="contact" smooth={true} duration={500} className='cursor-pointer'>Contact Us</Link>
-            <Link to="download" smooth={true} duration={500} className='cursor-pointer'>Download</Link>
-            <NavLink to={"/privacy-policy"}>Privacy Policy</NavLink>
-            <NavLink to={"/refund-and-cancellation-policy"}>Refund & Cancellation Policy</NavLink>
-            <NavLink to={"/terms-and-conditions"}>Terms & Conditions</NavLink>
+            <p onClick={() => handleScroll("/", "home")} className='cursor-pointer'>Home</p>
+            <p onClick={() => handleScroll("/", "about")} className='cursor-pointer'>About</p>
+            <p onClick={() => handleScroll("/", "contact")} className='cursor-pointer'>Contact Us</p>
+            <p onClick={() => handleScroll("/", "download")} className='cursor-pointer'>Download</p>
+            <p onClick={() => handleScroll("/privacy-policy", "privacy")} className='cursor-pointer'>Privacy Policy</p>
+            <p onClick={() => handleScroll("/refund-and-cancellation-policy", "refund")} className='cursor-pointer'>Refund & Cancellation Policy</p>
+            <p onClick={() => handleScroll("/terms-and-conditions", "terms")} className='cursor-pointer'>Terms & Conditions</p>
           </div>
         </motion.div>
 

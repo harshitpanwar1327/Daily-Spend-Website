@@ -1,15 +1,17 @@
 import Footer from "../components/Footer"
+import Logo from '../assets/logo.png'
+import { Element } from "react-scroll"
 
 const PrivacyPolicy = () => {
   return (
-    <div className="flex flex-col w-screen min-h-screen overflow-y-auto">
-      <div className="w-full bg-gradient-to-r from-orange-100 via-orange-200 to-orange-300 py-30 text-center flex flex-col gap-4">
+    <Element name="privacy" className="flex flex-col w-screen min-h-screen overflow-y-auto">
+      <div className="w-full bg-gradient-to-r from-orange-100 via-orange-200 to-orange-300 py-20 flex flex-col items-center gap-4">
+        <img src={Logo} alt="daily spend" className="w-25" />
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Privacy Policy</h2>
       </div>
 
       <div className="px-6 md:px-12 py-12 text-gray-600 flex flex-col gap-8">
-        <p>This Privacy Policy forms part and parcel of the Terms of Use for the Daily Spend Application. Capitalized terms which have been used here but are undefined shall have the same meaning as attributed to them in the Terms of Use. This Privacy Policy explains we do not collect any information whatsoever about you or anything related to your
-        device when you use our Apps. We will never collect any personal information from any updates that we may make to our Apps. We don’t store your data when you use our Apps. We do not collect any statistics, trends; neither do we track user movements. We do not include any links to other sites. We respect your privacy 100%. This is our promise to you!</p>
+        <p>This Privacy Policy forms part and parcel of the Terms of Use for the Daily Spend Application. Capitalized terms which have been used here but are undefined shall have the same meaning as attributed to them in the Terms of Use. This Privacy Policy explains we do not collect any information whatsoever about you or anything related to your device when you use our Apps. We will never collect any personal information from any updates that we may make to our Apps. We don’t store your data when you use our Apps. We do not collect any statistics, trends; neither do we track user movements. We do not include any links to other sites. We respect your privacy 100%. This is our promise to you!</p>
 
         <p>As we update, improve and expand the Daily Spend Applications, this policy may change, so please refer back to it periodically.</p>
 
@@ -68,7 +70,7 @@ const PrivacyPolicy = () => {
       </div>
 
       <Footer />
-    </div>
+    </Element>
   )
 }
 

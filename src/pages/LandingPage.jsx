@@ -13,14 +13,14 @@ import '../app.css'
 const LandingPage = () => {
   return (
     <>
-      <Element name="home"><Home /></Element>
+      <Home />
       <Hero />
       <WhyUs />
-      <Element name="about"><AboutUs /></Element>
+      <AboutUs />
       <Testimonial />
-      <Element name="contact"><Contact /></Element>
+      <Contact />
       <FAQ />
-      <Element name="download"><Download /></Element>
+      <Download />
       <Footer />
     </>
   );

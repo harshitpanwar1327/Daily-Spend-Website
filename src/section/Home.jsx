@@ -4,12 +4,13 @@ import NavigationBar from '../components/NavigationBar'
 import SocialMediaBar from '../components/SocialMediaBar'
 import Iphone from '../assets/iphone3.png'
 import { motion } from "motion/react"
+import { Element } from 'react-scroll'
 
 const Home = () => {
   const [sidebar, setSidebar] = useState(false);
 
   return (
-    <div className='page bg-[url(/src//assets/bg-slate.png)] bg-center bg-cover min-h-screen flex items-center justify-center'>
+    <Element name="home" className='page bg-[url(/src//assets/bg-slate.png)] bg-center bg-cover min-h-screen flex items-center justify-center'>
       <NavigationBar sidebar={sidebar} setSidebar={setSidebar}/>
 
       <div className="w-4/5 md:w-[90%] lg:w-4/5 grid grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-1 lg:grid-cols-3 place-items-center text-[#F1DABF] pt-16">
@@ -65,7 +66,7 @@ const Home = () => {
       </div>
 
       {sidebar && <SocialMediaBar setSidebar={setSidebar} />}
-    </div>
+    </Element>
   )
 }
 
